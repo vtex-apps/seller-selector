@@ -1,0 +1,33 @@
+{
+  "name": "CHANGE_ME",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "cd ./react && yarn lint",
+    "test": "cd ./react && yarn test",
+    "lint:locales": "intl-equalizer",
+    "locales:fix": "intl-equalizer --fix",
+    "verify": "yarn lint && yarn lint:locales && yarn test"
+  },
+  "version": "0.0.0",
+  "devDependencies": {
+    "@types/node": "12.12.21",
+    "@vtex/intl-equalizer": "^2.3.0",
+    "eslint": "6.7.2",
+    "eslint-config-vtex": "11.2.1",
+    "eslint-config-vtex-react": "5.1.0",
+    "husky": "^2.4.1",
+    "prettier": "1.19.1",
+    "typescript": "3.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn lint:locales && yarn locales:fix",
+      "pre-push": "yarn verify"
+    }
+  },
+  "intl-equalizer": {
+    "referenceLocale": "en",
+    "localeDirectory": "messages"
+  }
+}

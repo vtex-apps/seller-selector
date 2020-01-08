@@ -1,0 +1,9 @@
+{
+  "store/seller-list.pending": "Escriba el código postal para calcular",
+  "store/seller-list.seller": "Vendedor",
+  "store/seller-list.product-price": "Precio",
+  "store/seller-list.shipping": "Entrega",
+  "store/seller-list.shipping-and-price": "Precio + Envio",
+  "store/seller-list.postal-code": "Codigo Postal",
+  "store/seller-link.linkText": "Verifique otros vendedores"
+}
