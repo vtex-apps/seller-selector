@@ -1,3 +1,7 @@
+# WORK IN PROGRESS
+
+🚧 🚧 🚧
+
 # VTEX Seller Selector
 
 📢 Don't fork this project. Use, [contribute](https://github.com/vtex-apps/awesome-io#contributing), or open issues through [Store Discussion](https://github.com/vtex-apps/store-discussion).
@@ -13,25 +17,9 @@ and add then to their cart.
 
 ## Installation:
 
-### Ci
+### To Do:
 
-#### Install:
-
-```yml
-install:
-  commands:
-    - echo Installing Packages...
-    - cd react
-    - npm install
-    - echo Packages installed!
-```
-
-#### Pre-build:
-
-```yml
-pre_build:
-  commands:
-    - echo Running tests...
-    - npm run verify
-    - echo Lint and tests finished!
-```
+- Write Documentation
+- Make OneClickBuy a prop
+- Insert Postal Code Mask on ShippingSimulator
+- CSS Handles on ShippingSimulator
