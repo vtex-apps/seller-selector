@@ -9,8 +9,16 @@
     }
   },
   "seller-head": {
+    "children": ["seller-head-cell#Seller", "seller-head-cell#Price"]
+  },
+  "seller-head-cell#Seller": {
     "props": {
-      "headTitles": ["Seller", "Preço"]
+      "title": "Seller"
+    }
+  },
+  "seller-head-cell#Price": {
+    "props": {
+      "title": "Price"
     }
   },
   "flex-layout.col#infoRight": {

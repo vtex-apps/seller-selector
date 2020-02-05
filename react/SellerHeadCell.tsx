@@ -1,10 +1,14 @@
 import React from 'react'
 
-const SellerHeadCell: StorefrontFunctionComponent<any> = ({ ...props }) => {
+const SellerHeadCell: StorefrontFunctionComponent<any> = ({
+  title,
+  children,
+}) => {
   return (
-    <h5 className="items-center tc w-20 ph6 pv4 ma0 t-heading-5">
-      {props.text}
-    </h5>
+    <div>
+      <h5 className="items-center tc w-20 ph6 pv4 ma0 t-heading-5">{title}</h5>
+      {children}
+    </div>
   )
 }
 

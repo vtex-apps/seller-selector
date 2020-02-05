@@ -18,6 +18,11 @@
     "composition": "children"
   },
   "seller-head-cell": {
-    "component": "SellerHeadCell"
+    "component": "SellerHeadCell",
+    "composition": "children"
+  },
+  "seller-body": {
+    "component": "SellerBody",
+    "composition": "children"
   }
 }
