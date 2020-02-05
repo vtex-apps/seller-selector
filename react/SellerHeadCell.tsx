@@ -6,7 +6,13 @@ const SellerHeadCell: StorefrontFunctionComponent<any> = ({
 }) => {
   return (
     <div>
-      <h5 className="items-center tc w-20 ph6 pv4 ma0 t-heading-5">{title}</h5>
+      {title ? (
+        <h5 className="items-center tc w-20 ph6 pv4 ma0 t-heading-5">
+          {title}
+        </h5>
+      ) : (
+        <></>
+      )}
       {children}
     </div>
   )
