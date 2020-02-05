@@ -10,15 +10,14 @@
     "component": "LinkSeller"
   },
   "seller-table": {
-    "component": "SellerSelectorTable",
-    "allowed": ["seller-head"],
+    "component": "SellerTable",
     "composition": "children"
   },
   "seller-head": {
-    "component": "SellerSelectorHead",
+    "component": "SellerHead",
     "composition": "children"
   },
   "seller-head-cell": {
-    "component": "SellerSelectorHeadCell"
+    "component": "SellerHeadCell"
   }
 }

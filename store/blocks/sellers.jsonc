@@ -1,11 +1,16 @@
 {
   "store.sellers": {
-    "blocks": ["seller-table"]
+    "blocks": ["seller-head"]
   },
   "flex-layout.row#productInfo": {
     "children": ["flex-layout.col#infoRight", "flex-layout.col#infoLeft"],
     "props": {
       "blockClass": "sellersFlex"
+    }
+  },
+  "seller-head": {
+    "props": {
+      "headTitles": ["Seller", "Preço"]
     }
   },
   "flex-layout.col#infoRight": {
