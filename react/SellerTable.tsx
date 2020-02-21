@@ -1,10 +1,25 @@
-import React from 'react'
-import SellerSelectorHead from './SellerHead'
+import React, { useMemo } from 'react'
+import useProduct from 'vtex.product-context/useProduct'
+import SellerContext from './SellerContext'
 
-const SellerTable: StorefrontFunctionComponent<any> = ({ slug }) => {
+const SellerTable: StorefrontFunctionComponent<any> = ({ children }) => {
+  const { product, selectedItem, selectedQuantity } = useProduct()
+
+  const sellerContext = useMemo(
+    () => ({
+      selectedItem,
+      product,
+      selectedQuantity,
+      sellerList: selectedItem ? selectedItem.sellers : null,
+    }),
+    [selectedItem]
+  )
+
   return (
-    <div key={slug}>
-      <SellerSelectorHead></SellerSelectorHead>
+    <div>
+      <SellerContext.Provider value={sellerContext}>
+        {children}
+      </SellerContext.Provider>
     </div>
   )
 }

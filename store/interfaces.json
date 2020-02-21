@@ -24,5 +24,20 @@
   "seller-body": {
     "component": "SellerBody",
     "composition": "children"
+  },
+  "seller-row": {
+    "component": "SellerRow",
+    "composition": "children"
+  },
+  "seller-name": {
+    "component": "SellerName",
+    "composition": "children"
+  },
+  "seller-price": {
+    "component": "SellerPrice",
+    "composition": "children"
+  },
+  "seller-shipping": {
+    "component": "SellerShipping"
   }
 }

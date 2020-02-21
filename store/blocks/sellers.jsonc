@@ -1,12 +1,16 @@
 {
   "store.sellers": {
-    "blocks": ["seller-head"]
+    "blocks": ["seller-table"]
   },
   "flex-layout.row#productInfo": {
     "children": ["flex-layout.col#infoRight", "flex-layout.col#infoLeft"],
     "props": {
       "blockClass": "sellersFlex"
     }
+  },
+
+  "seller-table": {
+    "children": ["seller-head", "seller-body"]
   },
   "seller-head": {
     "children": ["seller-head-cell#Seller", "seller-head-cell#Price"]
@@ -20,6 +24,12 @@
     "props": {
       "title": "Price"
     }
+  },
+  "seller-body": {
+    "children": ["seller-row"]
+  },
+  "seller-row": {
+    "children": ["seller-name", "seller-price", "seller-shipping"]
   },
   "flex-layout.col#infoRight": {
     "children": ["product-images"],
