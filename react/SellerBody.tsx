@@ -3,7 +3,7 @@ import SellerContext from './SellerContext'
 import CurrentSellerContext from './CurrentSellerContext'
 
 const SellerBody: StorefrontFunctionComponent<any> = ({ children }) => {
-  const { sellerList } = useContext(SellerContext)
+  const { sellerList, shippingQuotes } = useContext(SellerContext)
 
   return (
     <div>
@@ -13,9 +13,11 @@ const SellerBody: StorefrontFunctionComponent<any> = ({ children }) => {
             value={useMemo(
               () => ({
                 currentSeller: current,
-                shipping: null,
+                shipping: shippingQuotes.logisticsInfo
+                  ? shippingQuotes.logisticsInfo[index]
+                  : null,
               }),
-              []
+              [shippingQuotes]
             )}
             key={index}
           >

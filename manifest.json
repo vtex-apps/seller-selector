@@ -19,11 +19,10 @@
     "vtex.store-graphql": "2.x",
     "vtex.shipping-estimate-translator": "2.x",
     "vtex.render-runtime": "8.x",
-    "vtex.flex-layout": "0.x"
+    "vtex.flex-layout": "0.x",
+    "vtex.format-currency": "0.x"
   },
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
   "policies": [],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

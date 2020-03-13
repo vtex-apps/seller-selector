@@ -37,7 +37,17 @@
     "component": "SellerPrice",
     "composition": "children"
   },
+  "seller-price-with-shipping": {
+    "component": "SellerPriceWithShipping",
+    "composition": "children"
+  },
   "seller-shipping": {
     "component": "SellerShipping"
+  },
+  "seller-add-to-cart": {
+    "component": "SellerAddToCart"
+  },
+  "seller-simulate-shipping": {
+    "component": "SimulateShipping"
   }
 }

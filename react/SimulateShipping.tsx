@@ -1,22 +1,57 @@
-import React, { useState, FC } from 'react'
+import React, { useState, FC, useContext } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
+import { useApolloClient } from 'react-apollo'
+import SimulateShippingQuery from './queries/SimulateShipping.gql'
+import { useRuntime } from 'vtex.render-runtime'
+import SellerContext from './SellerContext'
 
 const SIMULATE_SHIPPING_CSS_HANDLES = ['simulateShipping']
 
-interface Props {
-  onSimulateShipping: (a: string) => void
-}
-
-const SimulateShipping: FC<Props> = props => {
+const SimulateShipping: FC<any> = ({}) => {
   const [postalCode, setPostalCode] = useState('')
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
+  const { selectedItem, selectedQuantity, setShippingQuotes } = useContext(
+    SellerContext
+  )
+  let shippingItems = null
+
+  const client = useApolloClient()
+  const runtime = useRuntime()
+  const {
+    culture: { country },
+  } = runtime
+
+  if (selectedItem) {
+    shippingItems = selectedItem.sellers.map(
+      (current: any): ShippingItem => ({
+        id: selectedItem.itemId,
+        quantity: selectedQuantity.toString(),
+        seller: current.sellerId,
+      })
+    )
+  }
+
+  const variables = {
+    shippingItems,
+    country: country,
+    postalCode: '',
+  }
+
+  const onSimulateShipping = (postalCode: string) => {
+    client
+      .query({
+        query: SimulateShippingQuery,
+        variables: { ...variables, postalCode },
+      })
+      .then(result => setShippingQuotes(result.data.shipping))
+  }
 
   return (
     <form
       onSubmit={(e: any) => {
         e.preventDefault()
-        props.onSimulateShipping(postalCode)
+        onSimulateShipping(postalCode)
       }}
     >
       <div
@@ -38,12 +73,18 @@ const SimulateShipping: FC<Props> = props => {
         <input
           className="ba-s b--muted-3 br3-s bg-action-primary white"
           type="submit"
-          onClick={() => props.onSimulateShipping(postalCode)}
+          onClick={() => onSimulateShipping(postalCode)}
           value="Buscar"
         />
       </div>
     </form>
   )
+}
+
+interface ShippingItem {
+  id: string
+  quantity: string
+  seller: string
 }
 
 export default SimulateShipping

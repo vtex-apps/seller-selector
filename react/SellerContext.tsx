@@ -5,6 +5,8 @@ const SellerContext = createContext<SellerContextValue>({
   selectedItem: null,
   selectedQuantity: 0,
   product: null,
+  shippingQuotes: null,
+  setShippingQuotes: () => {},
 })
 
 interface SellerContextValue {
@@ -12,6 +14,8 @@ interface SellerContextValue {
   selectedItem: any
   product: any
   selectedQuantity: any
+  shippingQuotes: any
+  setShippingQuotes: any
 }
 
 export default SellerContext
