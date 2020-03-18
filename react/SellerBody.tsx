@@ -5,20 +5,24 @@ import CurrentSellerContext from './CurrentSellerContext'
 const SellerBody: StorefrontFunctionComponent<any> = ({ children }) => {
   const { sellerList, shippingQuotes } = useContext(SellerContext)
 
+  function rogerinho({ current, index }) {
+    useMemo(
+      ({ current, index }) => ({
+        currentSeller: current,
+        shipping: shippingQuotes.logisticsInfo
+          ? shippingQuotes.logisticsInfo[index]
+          : null,
+      }),
+      [shippingQuotes]
+    )
+  }
+
   return (
     <div>
       {sellerList ? (
         sellerList.map((current: any, index: number) => (
           <CurrentSellerContext.Provider
-            value={useMemo(
-              () => ({
-                currentSeller: current,
-                shipping: shippingQuotes.logisticsInfo
-                  ? shippingQuotes.logisticsInfo[index]
-                  : null,
-              }),
-              [shippingQuotes]
-            )}
+            value={() => rogerinho(current, index)}
             key={index}
           >
             {children}
