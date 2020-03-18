@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
-import CurrentSellerContext from './CurrentSellerContext'
 import { FormattedCurrency } from 'vtex.format-currency'
 
-const SellerPrice: StorefrontFunctionComponent<any> = ({}) => {
+import CurrentSellerContext from './CurrentSellerContext'
+
+const SellerPrice: StorefrontFunctionComponent<any> = () => {
   const { currentSeller } = useContext(CurrentSellerContext)
 
   return (

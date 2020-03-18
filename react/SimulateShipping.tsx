@@ -2,13 +2,14 @@ import React, { useState, FC, useContext } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 import { useApolloClient } from 'react-apollo'
-import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import { useRuntime } from 'vtex.render-runtime'
+
+import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import SellerContext from './SellerContext'
 
 const SIMULATE_SHIPPING_CSS_HANDLES = ['simulateShipping']
 
-const SimulateShipping: FC<any> = ({}) => {
+const SimulateShipping: FC<any> = () => {
   const [postalCode, setPostalCode] = useState('')
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
   const { selectedItem, selectedQuantity, setShippingQuotes } = useContext(

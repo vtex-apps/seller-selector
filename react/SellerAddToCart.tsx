@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import BuyButton from 'vtex.store-components/BuyButton'
+
 import SellerContext from './SellerContext'
 import CurrentSellerContext from './CurrentSellerContext'
 

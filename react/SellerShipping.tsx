@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
-import CurrentSellerContext from './CurrentSellerContext'
 import { FormattedMessage } from 'react-intl'
 import { FormattedCurrency } from 'vtex.format-currency'
 import TranslateEstimate from 'vtex.shipping-estimate-translator/TranslateEstimate'
 
-const SellerShipping: StorefrontFunctionComponent<any> = ({}) => {
-  const { shipping } = useContext(CurrentSellerContext)
+import CurrentSellerContext from './CurrentSellerContext'
 
-  console.log(shipping)
+const SellerShipping: StorefrontFunctionComponent<any> = () => {
+  const { shipping } = useContext(CurrentSellerContext)
 
   return (
     <div className="items-center tc w-100-s w-20-m br2 ph6 pv4 ma0 w-100-s w-20-m">

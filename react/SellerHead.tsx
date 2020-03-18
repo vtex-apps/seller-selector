@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+
 const SELLERS_CSS_HANDLES = ['sellersHeader']
 
 const SellerHead: StorefrontFunctionComponent<any> = ({ children }) => {

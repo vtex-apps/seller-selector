@@ -1,28 +1,31 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useContext, useCallback } from 'react'
+
 import SellerContext from './SellerContext'
 import CurrentSellerContext from './CurrentSellerContext'
 
 const SellerBody: StorefrontFunctionComponent<any> = ({ children }) => {
   const { sellerList, shippingQuotes } = useContext(SellerContext)
 
-  function rogerinho({ current, index }) {
-    useMemo(
-      ({ current, index }) => ({
+  const currentSellerCreate = useCallback(
+    (current: any, index: number) => {
+      const currentContext = {
         currentSeller: current,
         shipping: shippingQuotes.logisticsInfo
           ? shippingQuotes.logisticsInfo[index]
           : null,
-      }),
-      [shippingQuotes]
-    )
-  }
+      }
+
+      return currentContext
+    },
+    [shippingQuotes]
+  )
 
   return (
     <div>
       {sellerList ? (
         sellerList.map((current: any, index: number) => (
           <CurrentSellerContext.Provider
-            value={() => rogerinho(current, index)}
+            value={currentSellerCreate(current, index)}
             key={index}
           >
             {children}

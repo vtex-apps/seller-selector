@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
+
 import CurrentSellerContext from './CurrentSellerContext'
 
-const SellerName: StorefrontFunctionComponent<any> = ({}) => {
+const SellerName: StorefrontFunctionComponent<any> = () => {
   const { currentSeller } = useContext(CurrentSellerContext)
 
   return (

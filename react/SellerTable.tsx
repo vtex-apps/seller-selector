@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import useProduct from 'vtex.product-context/useProduct'
+
 import SellerContext from './SellerContext'
 
 const SellerTable: StorefrontFunctionComponent<any> = ({ children }) => {

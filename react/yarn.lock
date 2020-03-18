@@ -5469,37 +5469,45 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.css-handles@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.css-handles@0.4.1/public/@types/vtex.css-handles":
-  version "0.4.1"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.css-handles@0.4.1/public/@types/vtex.css-handles#16fe9485e8e7183b94f28496ed8cdd741c83f227"
+"vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.2/public/@types/vtex.css-handles":
+  version "0.4.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.2/public/@types/vtex.css-handles#62ee61d1bb9efdc919e5cf4bb44fabcf9050d255"
 
-"vtex.product-context@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.product-context@0.6.0/public/@types/vtex.product-context":
-  version "0.6.0"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.product-context@0.6.0/public/@types/vtex.product-context#3cf6c057480a727aa2d90134c32b260dcc7004e4"
+"vtex.flex-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.14.0/public/@types/vtex.flex-layout":
+  version "0.14.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.14.0/public/@types/vtex.flex-layout#6ad6fc3e73ae5b5869247dd5f446df7115c7133a"
 
-"vtex.render-runtime@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.88.0/public/@types/vtex.render-runtime":
-  version "8.88.0"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.render-runtime@8.88.0/public/@types/vtex.render-runtime#0257088b54c76eec74477e5dd9014d5b38779ac7"
+"vtex.format-currency@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.format-currency@0.1.3/public/@types/vtex.format-currency":
+  version "0.1.3"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.format-currency@0.1.3/public/@types/vtex.format-currency#3544c6ee5c14482da201a198eede4ffba9f19406"
 
-"vtex.shipping-estimate-translator@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.shipping-estimate-translator@2.1.2/public/_types/react":
+"vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.7.1/public/@types/vtex.product-context":
+  version "0.7.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.7.1/public/@types/vtex.product-context#2476a5831bdd066e4ce99e0a004480b0ee445007"
+
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.95.1/public/@types/vtex.render-runtime":
+  version "8.95.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.95.1/public/@types/vtex.render-runtime#3aae291d0cd239d3059ea8ae8c3c2800ce36d22f"
+
+"vtex.shipping-estimate-translator@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.shipping-estimate-translator@2.1.2/public/_types/react":
   version "2.1.2"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.shipping-estimate-translator@2.1.2/public/_types/react#95629f50253d1f857f9f401f8d4c575c1ac52c99"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.shipping-estimate-translator@2.1.2/public/_types/react#95629f50253d1f857f9f401f8d4c575c1ac52c99"
 
-"vtex.store-components@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-components@3.98.0/public/_types/react":
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.107.0/public/_types/react":
   version "0.0.0"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-components@3.98.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.107.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
-"vtex.store-graphql@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-graphql@2.113.3/public/@types/vtex.store-graphql":
-  version "2.113.3"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store-graphql@2.113.3/public/@types/vtex.store-graphql#5518e18d243582dccc7502ced6269323615a0ce1"
+"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.119.0/public/@types/vtex.store-graphql":
+  version "2.119.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.119.0/public/@types/vtex.store-graphql#6b6bc1bf040bc69f4b841ac19a2b026c92787194"
 
-"vtex.store@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store@2.80.0/public/@types/vtex.store":
-  version "2.80.0"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.store@2.80.0/public/@types/vtex.store#e82fa1221247bbe13b01c727eb4a1821bbf3a14a"
+"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.91.0/public/@types/vtex.store":
+  version "2.91.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.91.0/public/@types/vtex.store#a99653bfa8d816d56df8717bc35bc7e208e0ec07"
 
-"vtex.styleguide@http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.styleguide@9.104.0/public/@types/vtex.styleguide":
-  version "9.104.0"
-  resolved "http://vtex.vteximg.com.br/_v/public/typings/v1/vtex.styleguide@9.104.0/public/@types/vtex.styleguide#987b927042f3bd3f6328761efc2c4c39af20e5d6"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.20/public/@types/vtex.styleguide":
+  version "9.112.20"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.20/public/@types/vtex.styleguide#24a4c80ce94ad4adc500cefd17c3f5071ad47b4c"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

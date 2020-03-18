@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import CurrentSellerContext from './CurrentSellerContext'
 import { FormattedCurrency } from 'vtex.format-currency'
 import { FormattedMessage } from 'react-intl'
 
-const SellerPriceWithShipping: StorefrontFunctionComponent<any> = ({}) => {
+import CurrentSellerContext from './CurrentSellerContext'
+
+const SellerPriceWithShipping: StorefrontFunctionComponent<any> = () => {
   const { currentSeller, shipping } = useContext(CurrentSellerContext)
 
   return (
