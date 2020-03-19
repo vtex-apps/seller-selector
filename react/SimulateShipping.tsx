@@ -3,11 +3,15 @@ import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 import { useApolloClient } from 'react-apollo'
 import { useRuntime } from 'vtex.render-runtime'
-
 import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import SellerContext from './SellerContext'
-
-const SIMULATE_SHIPPING_CSS_HANDLES = ['simulateShipping']
+const SIMULATE_SHIPPING_CSS_HANDLES = [
+  'simulateShipping',
+  'simulateShippingText',
+  'simulateShippingForm',
+  'simulateShippingInput',
+  'simulateShippingSearch'
+]
 
 const SimulateShipping: FC<any> = () => {
   const [postalCode, setPostalCode] = useState('')
@@ -49,7 +53,7 @@ const SimulateShipping: FC<any> = () => {
   }
 
   return (
-    <form
+    <form className={`${handles.simulateShippingForm}`}
       onSubmit={(e: any) => {
         e.preventDefault()
         onSimulateShipping(postalCode)
@@ -58,11 +62,11 @@ const SimulateShipping: FC<any> = () => {
       <div
         className={`${handles.simulateShipping} flex mr-auto ml-auto mw8 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
       >
-        <p>
+        <p className={`${handles.simulateShippingText}`}>
           <FormattedMessage id="store/seller-list.postal-code" />
         </p>
         <input
-          className="ml3 mr3 ba-s b--muted-3 br3-s pl2"
+          className={`${handles.simulateShippingInput} ml3 mr3 ba-s b--muted-3 br3-s pl2`}
           type="text"
           onChange={(e: any) => {
             setPostalCode(e.target.value)
@@ -72,7 +76,7 @@ const SimulateShipping: FC<any> = () => {
           id="postalcode"
         ></input>
         <input
-          className="ba-s b--muted-3 br3-s bg-action-primary white"
+          className={`${handles.simulateShippingSearch} ba-s b--muted-3 br3-s bg-action-primary white`}
           type="submit"
           onClick={() => onSimulateShipping(postalCode)}
           value="Buscar"

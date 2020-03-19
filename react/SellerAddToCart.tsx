@@ -1,15 +1,19 @@
 import React, { useContext } from 'react'
 import BuyButton from 'vtex.store-components/BuyButton'
-
 import SellerContext from './SellerContext'
 import CurrentSellerContext from './CurrentSellerContext'
+import { useCssHandles } from 'vtex.css-handles'
+const SELLERS_CSS_HANDLES = [
+  'sellerBuyContainer'
+]
 
 const SellerAddToCart: StorefrontFunctionComponent<any> = ({ OneClickBuy }) => {
   const { product, selectedItem, selectedQuantity } = useContext(SellerContext)
   const { currentSeller } = useContext(CurrentSellerContext)
+  const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
-    <div className="items-center tc br2 ph6 pv4 ma0 w-100-s w-20-m">
+    <div className={`${handles.sellerBuyContainer} items-center tc br2 ph6 pv4 ma0 w-100-s w-20-m`}>
       <BuyButton
         skuItems={BuyButton.mapCatalogItemToCart({
           product,
