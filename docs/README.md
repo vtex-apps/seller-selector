@@ -1,10 +1,10 @@
 # WORK IN PROGRESS
 
-ðŸš§ ðŸš§ ðŸš§
+=§ =§ =§
 
 # VTEX Seller Selector
 
-ðŸ“¢ Don't fork this project. Use, [contribute](https://github.com/vtex-apps/awesome-io#contributing), or open issues through [Store Discussion](https://github.com/vtex-apps/store-discussion).
+=â Don't fork this project. Use, [contribute](https://github.com/vtex-apps/awesome-io#contributing), or open issues through [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 ## Description:
 
@@ -23,3 +23,8 @@ and add then to their cart.
 - Make OneClickBuy a prop
 - Insert Postal Code Mask on ShippingSimulator
 - CSS Handles on ShippingSimulator
+
+
+**Upcoming documentation:**
+
+ - [Added new CSS Handles](https://github.com/vtex-apps/seller-selector/pull/1)
