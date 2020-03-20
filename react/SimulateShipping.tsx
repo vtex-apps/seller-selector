@@ -17,7 +17,13 @@ import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import SellerContext from './SellerContext'
 import { getNewAddress } from './utils'
 
-const SIMULATE_SHIPPING_CSS_HANDLES = ['simulateShipping']
+const SIMULATE_SHIPPING_CSS_HANDLES = [
+  'simulateShipping',
+  'simulateShippingText',
+  'simulateShippingForm',
+  'simulateShippingInput',
+  'simulateShippingSearch',
+]
 
 const SimulateShipping: FC<any> = () => {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
@@ -84,7 +90,12 @@ const SimulateShipping: FC<any> = () => {
           <PostalCodeGetter />
         </AddressContainer>
       </AddressRules>
-      <Button size="small" type="submit" block>
+      <Button
+        className={`${handles.simulateShippingSearch} ba-s b--muted-3 br3-s bg-action-primary white`}
+        size="small"
+        type="submit"
+        block
+      >
         <FormattedMessage id="store/seller-list.shipping-label" />
       </Button>
     </div>

@@ -31,6 +31,7 @@
     "vtex.store": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.91.0/public/@types/vtex.store",
     "vtex.store-components": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.108.0/public/_types/react",
     "vtex.store-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.119.0/public/@types/vtex.store-graphql",
-    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.24/public/@types/vtex.styleguide"
-  }
+    "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.20/public/@types/vtex.styleguide"
+  },
+  "version": "0.1.0"
 }
