@@ -5469,6 +5469,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
+"vtex.address-form@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.5.1/public/_types/react":
+  version "0.0.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.5.1/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.2/public/@types/vtex.css-handles":
   version "0.4.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.2/public/@types/vtex.css-handles#62ee61d1bb9efdc919e5cf4bb44fabcf9050d255"
@@ -5493,9 +5497,9 @@ verror@1.10.0:
   version "2.1.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.shipping-estimate-translator@2.1.2/public/_types/react#95629f50253d1f857f9f401f8d4c575c1ac52c99"
 
-"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.107.0/public/_types/react":
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.108.0/public/_types/react":
   version "0.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.107.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.108.0/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
 
 "vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.119.0/public/@types/vtex.store-graphql":
   version "2.119.0"

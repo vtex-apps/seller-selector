@@ -4,6 +4,6 @@
   "store/seller-list.product-price": "Preço Produto",
   "store/seller-list.shipping": "Frete",
   "store/seller-list.shipping-and-price": "Preço + Frete",
-  "store/seller-list.postal-code": "CEP",
+  "store/seller-list.shipping-label": "Calcular o frete",
   "store/seller-link.linkText": "Verificar demais lojas"
 }

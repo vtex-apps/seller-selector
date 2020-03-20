@@ -1,0 +1,21 @@
+.vtex-store-components-3-x-simulateShipping .vtex-input {
+  height: 100%;
+}
+
+.vtex-store-components-3-x-simulateShipping .vtex-input input {
+  padding: 10px 5px;
+  color: #4f4f4f;
+  border: 1px solid #e3e4e6;
+  border-radius: 2px;
+  height: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.vtex-sellerselector-0-x-simulateShipping .vtex-button {
+  border-radius: 2px;
+  width: auto;
+  height: 3.8rem;
+  margin-left: 0.875rem;
+  margin-top: 0.875rem;
+}

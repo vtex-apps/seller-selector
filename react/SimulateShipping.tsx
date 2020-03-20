@@ -1,20 +1,28 @@
 import React, { useState, FC, useContext } from 'react'
-import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 import { useApolloClient } from 'react-apollo'
 import { useRuntime } from 'vtex.render-runtime'
+import {
+  AddressRules,
+  AddressContainer,
+  PostalCodeGetter,
+} from 'vtex.address-form'
+import { StyleguideInput } from 'vtex.address-form/inputs'
+import { Button } from 'vtex.styleguide'
+import { addValidation } from 'vtex.address-form/helpers'
+import { FormattedMessage } from 'react-intl'
+import './global.css'
+
 import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import SellerContext from './SellerContext'
+import { getNewAddress } from './utils'
+
 const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShipping',
-  'simulateShippingText',
-  'simulateShippingForm',
-  'simulateShippingInput',
-  'simulateShippingSearch'
+  'simulateShippingSearch',
 ]
 
 const SimulateShipping: FC<any> = () => {
-  const [postalCode, setPostalCode] = useState('')
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
   const { selectedItem, selectedQuantity, setShippingQuotes } = useContext(
     SellerContext
@@ -43,7 +51,11 @@ const SimulateShipping: FC<any> = () => {
     postalCode: '',
   }
 
-  const onSimulateShipping = (postalCode: string) => {
+  const [address, setAddress] = useState(() =>
+    addValidation(getNewAddress(country))
+  )
+
+  const updateShippingQuotes = (postalCode: string) => {
     client
       .query({
         query: SimulateShippingQuery,
@@ -52,37 +64,38 @@ const SimulateShipping: FC<any> = () => {
       .then(result => setShippingQuotes(result.data.shipping))
   }
 
+  const handleAddressChange = (newAddress: any) => {
+    const updatedAddress = {
+      ...address,
+      ...newAddress,
+    }
+    setAddress(updatedAddress)
+    if (updatedAddress.postalCode.valid)
+      updateShippingQuotes(updatedAddress.postalCode.value)
+  }
+
   return (
-    <form className={`${handles.simulateShippingForm}`}
-      onSubmit={(e: any) => {
-        e.preventDefault()
-        onSimulateShipping(postalCode)
-      }}
+    <div
+      className={`${handles.simulateShipping} flex mr-auto ml-auto mw6 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
     >
-      <div
-        className={`${handles.simulateShipping} flex mr-auto ml-auto mw8 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
+      <AddressRules country={country} shouldUseIOFetching>
+        <AddressContainer
+          Input={StyleguideInput}
+          address={address}
+          onChangeAddress={handleAddressChange}
+        >
+          <PostalCodeGetter />
+        </AddressContainer>
+      </AddressRules>
+      <Button
+        className={`${handles.simulateShippingSearch} ba-s b--muted-3 br3-s bg-action-primary red`}
+        size="small"
+        type="submit"
+        block
       >
-        <p className={`${handles.simulateShippingText}`}>
-          <FormattedMessage id="store/seller-list.postal-code" />
-        </p>
-        <input
-          className={`${handles.simulateShippingInput} ml3 mr3 ba-s b--muted-3 br3-s pl2`}
-          type="text"
-          onChange={(e: any) => {
-            setPostalCode(e.target.value)
-          }}
-          value={postalCode}
-          name="postalcode"
-          id="postalcode"
-        ></input>
-        <input
-          className={`${handles.simulateShippingSearch} ba-s b--muted-3 br3-s bg-action-primary white`}
-          type="submit"
-          onClick={() => onSimulateShipping(postalCode)}
-          value="Buscar"
-        />
-      </div>
-    </form>
+        <FormattedMessage id="store/seller-list.shipping-label" />
+      </Button>
+    </div>
   )
 }
 

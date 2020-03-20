@@ -16,7 +16,7 @@ const SellerTable: StorefrontFunctionComponent<any> = ({ children }) => {
       shippingQuotes,
       setShippingQuotes,
     }),
-    [selectedItem, shippingQuotes]
+    [product, selectedItem, selectedQuantity, shippingQuotes]
   )
 
   return (

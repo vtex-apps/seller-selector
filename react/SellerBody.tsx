@@ -1,10 +1,10 @@
 import React, { useContext, useCallback } from 'react'
+import { useCssHandles } from 'vtex.css-handles'
+
 import SellerContext from './SellerContext'
 import CurrentSellerContext from './CurrentSellerContext'
-import { useCssHandles } from 'vtex.css-handles'
-const SELLERS_CSS_HANDLES = [
-  'sellerList',
-]
+
+const SELLERS_CSS_HANDLES = ['sellerList']
 
 const SellerBody: StorefrontFunctionComponent<any> = ({ children }) => {
   const { sellerList, shippingQuotes } = useContext(SellerContext)
