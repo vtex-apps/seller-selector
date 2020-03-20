@@ -7,5 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.0.2] - 2020-03-20
 ### Added
-- Intial release.
+- CSS Handles to every component block
+
