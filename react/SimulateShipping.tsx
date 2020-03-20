@@ -19,9 +19,6 @@ import { getNewAddress } from './utils'
 
 const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShipping',
-  'simulateShippingText',
-  'simulateShippingForm',
-  'simulateShippingInput',
   'simulateShippingSearch',
 ]
 
@@ -79,7 +76,7 @@ const SimulateShipping: FC<any> = () => {
 
   return (
     <div
-      className={`${handles.simulateShipping} flex mr-auto ml-auto mw8 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
+      className={`${handles.simulateShipping} flex mr-auto ml-auto mw6 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
     >
       <AddressRules country={country} shouldUseIOFetching>
         <AddressContainer
@@ -91,7 +88,7 @@ const SimulateShipping: FC<any> = () => {
         </AddressContainer>
       </AddressRules>
       <Button
-        className={`${handles.simulateShippingSearch} ba-s b--muted-3 br3-s bg-action-primary white`}
+        className={`${handles.simulateShippingSearch} ba-s b--muted-3 br3-s bg-action-primary red`}
         size="small"
         type="submit"
         block

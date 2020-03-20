@@ -5509,9 +5509,9 @@ verror@1.10.0:
   version "2.91.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.91.0/public/@types/vtex.store#a99653bfa8d816d56df8717bc35bc7e208e0ec07"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.24/public/@types/vtex.styleguide":
-  version "9.112.24"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.24/public/@types/vtex.styleguide#e9f6e91b08a7a36c472979aead8641f3c20c4db4"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.20/public/@types/vtex.styleguide":
+  version "9.112.20"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.112.20/public/@types/vtex.styleguide#24a4c80ce94ad4adc500cefd17c3f5071ad47b4c"
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
