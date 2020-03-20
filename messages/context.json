@@ -4,6 +4,6 @@
   "store/seller-list.product-price": "Product Price",
   "store/seller-list.shipping": "Shipping",
   "store/seller-list.shipping-and-price": "Price + Shipping Cost",
-  "store/seller-list.postal-code": "Postal Code",
+  "store/seller-list.shipping-label": "Calculate shipping",
   "store/seller-link.linkText": "View More Sellers"
 }
