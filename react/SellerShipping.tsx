@@ -6,7 +6,7 @@ import { useCssHandles } from 'vtex.css-handles'
 
 import { useCurrentSeller } from './CurrentSellerContext'
 
-const SELLERS_CSS_HANDLES = ['sellerShipping', 'sellerShippingText']
+const SELLERS_CSS_HANDLES = ['sellerShipping', 'sellerShippingText'] as const
 
 const SellerShipping: StorefrontFunctionComponent = () => {
   const { shipping } = useCurrentSeller()

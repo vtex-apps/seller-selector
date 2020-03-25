@@ -5,7 +5,7 @@ import useProduct from 'vtex.product-context/useProduct'
 
 import { useCurrentSeller } from './CurrentSellerContext'
 
-const SELLERS_CSS_HANDLES = ['sellerBuyContainer']
+const SELLERS_CSS_HANDLES = ['sellerBuyContainer'] as const
 
 interface Props {
   isOneClickBuy?: boolean

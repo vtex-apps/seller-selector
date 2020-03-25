@@ -21,7 +21,7 @@ import { getNewAddress } from './utils'
 const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShipping',
   'simulateShippingSearch',
-]
+] as const
 
 const SimulateShipping: FC = () => {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
