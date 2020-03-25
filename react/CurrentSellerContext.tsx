@@ -1,4 +1,6 @@
-import { createContext } from 'react'
+import React, { createContext, useContext, FC } from 'react'
+
+import { Seller, LogisticsInfo } from './SellerContext'
 
 const CurrentSellerContext = createContext<CurrentSellerContextValue>({
   currentSeller: null,
@@ -6,8 +8,25 @@ const CurrentSellerContext = createContext<CurrentSellerContextValue>({
 })
 
 interface CurrentSellerContextValue {
-  currentSeller: any
-  shipping: any
+  currentSeller: Seller | null
+  shipping: LogisticsInfo | null
 }
 
-export default CurrentSellerContext
+export const useCurrentSeller = () => {
+  return useContext(CurrentSellerContext)
+}
+
+interface ProviderProps {
+  value: CurrentSellerContextValue
+}
+
+export const CurrentSellerProvider: FC<ProviderProps> = ({
+  value,
+  children,
+}) => {
+  return (
+    <CurrentSellerContext.Provider value={value}>
+      {children}
+    </CurrentSellerContext.Provider>
+  )
+}

@@ -1,24 +1,27 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
-const SELLERS_CSS_HANDLES = ['sellersHeaderText', 'sellerHeaderContainers']
+const SELLERS_CSS_HANDLES = ['sellerHeadCell', 'sellerHeadText'] as const
 
-const SellerHeadCell: StorefrontFunctionComponent<any> = ({
+interface Props {
+  title: string
+}
+
+const SellerHeadCell: StorefrontFunctionComponent<Props> = ({
   title,
   children,
 }) => {
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
+
   return (
-    <div className={`${handles.sellerHeaderContainers}`}>
+    <div className={`${handles.sellerHeadCell}`}>
       {title ? (
         <h5
-          className={`${handles.sellersHeaderText} items-center tc w-20 ph6 pv4 ma0 t-heading-5`}
+          className={`${handles.sellerHeadText} items-center tc w-20 ph6 pv4 ma0 t-heading-5`}
         >
           {title}
         </h5>
-      ) : (
-        <></>
-      )}
+      ) : null}
       {children}
     </div>
   )

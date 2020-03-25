@@ -1,23 +1,23 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FormattedCurrency } from 'vtex.format-currency'
 import { useCssHandles } from 'vtex.css-handles'
 
-import CurrentSellerContext from './CurrentSellerContext'
+import { useCurrentSeller } from './CurrentSellerContext'
 
-const SELLERS_CSS_HANDLES = ['sellerPrice']
+const SELLERS_CSS_HANDLES = ['sellerPrice'] as const
 
-const SellerPrice: StorefrontFunctionComponent<any> = () => {
-  const { currentSeller } = useContext(CurrentSellerContext)
+const SellerPrice: StorefrontFunctionComponent = () => {
+  const { currentSeller } = useCurrentSeller()
 
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
   return (
-    <>
-      <p
-        className={`${handles.sellerPrice} items-center tc w-100-s w-20-m br2 ph6 pv4 ma0`}
-      >
-        <FormattedCurrency value={currentSeller.commertialOffer.Price} />
-      </p>
-    </>
+    <p
+      className={`${handles.sellerPrice} items-center tc w-100-s w-20-m br2 ph6 pv4 ma0`}
+    >
+      <FormattedCurrency
+        value={currentSeller ? currentSeller.commertialOffer.Price : 0}
+      />
+    </p>
   )
 }
 

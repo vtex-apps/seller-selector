@@ -1,4 +1,4 @@
-import React, { useState, FC, useContext } from 'react'
+import React, { useState, FC } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useApolloClient } from 'react-apollo'
 import { useRuntime } from 'vtex.render-runtime'
@@ -9,12 +9,13 @@ import {
 } from 'vtex.address-form'
 import { StyleguideInput } from 'vtex.address-form/inputs'
 import { Button } from 'vtex.styleguide'
+import useProduct from 'vtex.product-context/useProduct'
 import { addValidation } from 'vtex.address-form/helpers'
 import { FormattedMessage } from 'react-intl'
 import './global.css'
 
 import SimulateShippingQuery from './queries/SimulateShipping.gql'
-import SellerContext from './SellerContext'
+import { useSellerContext } from './SellerContext'
 import { getNewAddress } from './utils'
 
 const SIMULATE_SHIPPING_CSS_HANDLES = [
@@ -22,11 +23,10 @@ const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShippingSearch',
 ]
 
-const SimulateShipping: FC<any> = () => {
+const SimulateShipping: FC = () => {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
-  const { selectedItem, selectedQuantity, setShippingQuotes } = useContext(
-    SellerContext
-  )
+  const { selectedItem, selectedQuantity } = useProduct()
+  const { setShippingQuotes } = useSellerContext()
   let shippingItems = null
 
   const client = useApolloClient()
@@ -37,7 +37,7 @@ const SimulateShipping: FC<any> = () => {
 
   if (selectedItem) {
     shippingItems = selectedItem.sellers.map(
-      (current: any): ShippingItem => ({
+      (current: { sellerId: string }): ShippingItem => ({
         id: selectedItem.itemId,
         quantity: selectedQuantity.toString(),
         seller: current.sellerId,

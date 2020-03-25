@@ -5,5 +5,6 @@
   "store/seller-list.shipping": "Frete",
   "store/seller-list.shipping-and-price": "Preço + Frete",
   "store/seller-list.shipping-label": "Calcular o frete",
-  "store/seller-link.linkText": "Verificar demais lojas"
+  "store/seller-link.linkText": "Verificar {number, plural, one {uma outra loja} other {# outras lojas}}",
+  "store/seller-list.shipping-estimate": "{name} {price} {estimate}"
 }
