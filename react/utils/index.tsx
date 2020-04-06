@@ -3,8 +3,9 @@ let addressId = 1
 const getRandomAddressId = () =>
   (addressId++ * new Date().getTime() * -1).toString().replace('-', '')
 
-export const getNewAddress = (country: any) => {
+export const getNewAddress = (country: string) => {
   const addressId = getRandomAddressId()
+
   return {
     addressId,
     addressType: 'residential',

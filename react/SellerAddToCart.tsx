@@ -1,15 +1,21 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import BuyButton from 'vtex.store-components/BuyButton'
 import { useCssHandles } from 'vtex.css-handles'
+import useProduct from 'vtex.product-context/useProduct'
 
-import SellerContext from './SellerContext'
-import CurrentSellerContext from './CurrentSellerContext'
+import { useCurrentSeller } from './CurrentSellerContext'
 
-const SELLERS_CSS_HANDLES = ['sellerBuyContainer']
+const SELLERS_CSS_HANDLES = ['sellerBuyContainer'] as const
 
-const SellerAddToCart: StorefrontFunctionComponent<any> = ({ OneClickBuy }) => {
-  const { product, selectedItem, selectedQuantity } = useContext(SellerContext)
-  const { currentSeller } = useContext(CurrentSellerContext)
+interface Props {
+  isOneClickBuy?: boolean
+}
+
+const SellerAddToCart: StorefrontFunctionComponent<Props> = ({
+  isOneClickBuy,
+}) => {
+  const { product, selectedItem, selectedQuantity } = useProduct()
+  const { currentSeller } = useCurrentSeller()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
@@ -24,11 +30,9 @@ const SellerAddToCart: StorefrontFunctionComponent<any> = ({ OneClickBuy }) => {
           selectedQuantity,
         })}
         available={
-          currentSeller &&
-          currentSeller.commertialOffer &&
-          currentSeller.commertialOffer.AvailableQuantity > 0
+          currentSeller && currentSeller.commertialOffer.AvailableQuantity > 0
         }
-        isOneClickBuy={OneClickBuy}
+        isOneClickBuy={isOneClickBuy}
         shouldAddToCart
       ></BuyButton>
     </div>

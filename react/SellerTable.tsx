@@ -1,39 +1,29 @@
 import React, { useMemo, useState } from 'react'
 import useProduct from 'vtex.product-context/useProduct'
 
-import SellerContext from './SellerContext'
+import { ShippingQuote, SellerProvider } from './SellerContext'
 
-const SellerTable: StorefrontFunctionComponent<any> = ({ children }) => {
-  const { product, selectedItem, selectedQuantity } = useProduct()
-  const [shippingQuotes, setShippingQuotes] = useState({})
+const SellerTable: StorefrontFunctionComponent = ({ children }) => {
+  const { selectedItem } = useProduct()
+  const [shippingQuotes, setShippingQuotes] = useState<ShippingQuote | null>(
+    null
+  )
 
   const sellerContext = useMemo(
     () => ({
-      selectedItem,
-      product,
-      selectedQuantity,
       sellerList: selectedItem ? selectedItem.sellers : null,
       shippingQuotes,
       setShippingQuotes,
     }),
-    [product, selectedItem, selectedQuantity, shippingQuotes]
+    [selectedItem, shippingQuotes]
   )
 
-  return (
-    <div>
-      <SellerContext.Provider value={sellerContext}>
-        {children}
-      </SellerContext.Provider>
-    </div>
-  )
+  return <SellerProvider value={sellerContext}>{children}</SellerProvider>
 }
 
-//This is the schema form that will render the editable props on SiteEditor
 SellerTable.schema = {
   title: 'editor.countdown.title',
   description: 'editor.countdown.description',
-  type: 'object',
-  properties: {},
 }
 
 export default SellerTable
