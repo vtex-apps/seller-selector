@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { useCurrentSeller } from './CurrentSellerContext'
+import { useSellerContext } from './SellerContext'
 
 const SELLERS_CSS_HANDLES = [
   'sellerPriceShipping',
@@ -12,6 +13,7 @@ const SELLERS_CSS_HANDLES = [
 
 const SellerPriceWithShipping: StorefrontFunctionComponent = () => {
   const { currentSeller, shipping } = useCurrentSeller()
+  const { limitShownShippingInformation } = useSellerContext()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
@@ -19,7 +21,7 @@ const SellerPriceWithShipping: StorefrontFunctionComponent = () => {
       className={`${handles.sellerPriceShipping} items-center tc br2 ph6 pv4 ma0 w-100-s w-20-m`}
     >
       {shipping ? (
-        shipping.slas.map((sla, index: number) => (
+        shipping.slas.slice(0, limitShownShippingInformation).map((sla, index: number) => (
           <p key={index} className={`${handles.sellerPriceShippingText}`}>
             <FormattedCurrency
               value={
@@ -30,8 +32,8 @@ const SellerPriceWithShipping: StorefrontFunctionComponent = () => {
           </p>
         ))
       ) : (
-        <FormattedMessage id="store/seller-list.pending" />
-      )}
+          <FormattedMessage id="store/seller-list.pending" />
+        )}
     </div>
   )
 }

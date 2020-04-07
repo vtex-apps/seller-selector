@@ -1,10 +1,14 @@
 {
   "store.sellers": {
-    "around": ["productWrapper"],
+    "around": [
+      "productWrapper"
+    ],
     "context": "vtex.store/ProductContext"
   },
   "store.product.sellertest": {
-    "allowed": ["link-seller"]
+    "allowed": [
+      "link-seller"
+    ]
   },
   "link-seller": {
     "component": "LinkSeller"

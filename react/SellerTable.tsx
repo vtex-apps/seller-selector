@@ -3,7 +3,12 @@ import useProduct from 'vtex.product-context/useProduct'
 
 import { ShippingQuote, SellerProvider } from './SellerContext'
 
-const SellerTable: StorefrontFunctionComponent = ({ children }) => {
+interface Props {
+  limitShownShippingInformation: number
+}
+
+
+const SellerTable: StorefrontFunctionComponent<Props> = ({ limitShownShippingInformation, children }) => {
   const { selectedItem } = useProduct()
   const [shippingQuotes, setShippingQuotes] = useState<ShippingQuote | null>(
     null
@@ -14,6 +19,7 @@ const SellerTable: StorefrontFunctionComponent = ({ children }) => {
       sellerList: selectedItem ? selectedItem.sellers : null,
       shippingQuotes,
       setShippingQuotes,
+      limitShownShippingInformation: limitShownShippingInformation ? limitShownShippingInformation : 3
     }),
     [selectedItem, shippingQuotes]
   )

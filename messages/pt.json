@@ -1,9 +1,5 @@
 {
   "store/seller-list.pending": "Digite o CEP para calcular",
-  "store/seller-list.seller": "Loja",
-  "store/seller-list.product-price": "Preço Produto",
-  "store/seller-list.shipping": "Frete",
-  "store/seller-list.shipping-and-price": "Preço + Frete",
   "store/seller-list.shipping-label": "Calcular o frete",
   "store/seller-link.linkText": "Verificar {number, plural, one {uma outra loja} other {# outras lojas}}",
   "store/seller-list.shipping-estimate": "{name} {price} {estimate}"

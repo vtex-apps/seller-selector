@@ -1,10 +1,6 @@
 {
   "store/seller-list.pending": "Type postal code to calculate",
-  "store/seller-list.seller": "Seller",
-  "store/seller-list.product-price": "Product Price",
-  "store/seller-list.shipping": "Shipping",
-  "store/seller-list.shipping-and-price": "Price + Shipping Cost",
   "store/seller-list.shipping-label": "Calculate shipping",
-  "store/seller-link.linkText": "View more {number, plural, one {1 seller} other {# sellers}}",
+  "store/seller-link.linkText": "View {number, plural, one {1 more seller} other {# more sellers}}",
   "store/seller-list.shipping-estimate": "{name} {price} {estimate}"
 }

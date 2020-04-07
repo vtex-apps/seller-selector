@@ -23,6 +23,7 @@ const LinkSeller: StorefrontFunctionComponent = () => {
     <div
       className={`${handles.linkSellerContainer} flex flex-row-reverse relative`}
     >
+
       <Link
         className={`${handles.linkSeller}`}
         page="store.sellers"
