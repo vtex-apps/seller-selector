@@ -1,9 +1,5 @@
 {
   "store/seller-list.pending": "Escriba el código postal para calcular",
-  "store/seller-list.seller": "Vendedor",
-  "store/seller-list.product-price": "Precio",
-  "store/seller-list.shipping": "Entrega",
-  "store/seller-list.shipping-and-price": "Precio + Envio",
   "store/seller-list.shipping-label": "Calcular el flete",
   "store/seller-link.linkText": "Verifique {number, plural, one {otro vendedor} other {# otros vendedores}}",
   "store/seller-list.shipping-estimate": "{name} {price} {estimate}"

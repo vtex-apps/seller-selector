@@ -33,12 +33,14 @@ interface SellerContextValue {
   sellerList: Seller[] | null
   shippingQuotes: ShippingQuote | null
   setShippingQuotes: (quote: ShippingQuote) => void
+  limitShownShippingInformation: number
 }
 
 const SellerContext = createContext<SellerContextValue>({
   sellerList: null,
   shippingQuotes: null,
-  setShippingQuotes: () => {},
+  setShippingQuotes: () => { },
+  limitShownShippingInformation: 3
 })
 
 export const useSellerContext = (): SellerContextValue => {

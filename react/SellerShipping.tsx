@@ -5,11 +5,13 @@ import TranslateEstimate from 'vtex.shipping-estimate-translator/TranslateEstima
 import { useCssHandles } from 'vtex.css-handles'
 
 import { useCurrentSeller } from './CurrentSellerContext'
+import { useSellerContext } from './SellerContext'
 
 const SELLERS_CSS_HANDLES = ['sellerShipping', 'sellerShippingText'] as const
 
 const SellerShipping: StorefrontFunctionComponent = () => {
   const { shipping } = useCurrentSeller()
+  const { limitShownShippingInformation } = useSellerContext()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
@@ -17,7 +19,7 @@ const SellerShipping: StorefrontFunctionComponent = () => {
       className={`${handles.sellerShipping} items-center tc w-100-s w-20-m br2 ph6 pv4 ma0 w-100-s w-20-m`}
     >
       {shipping ? (
-        shipping.slas.map((sla, index: number) => (
+        shipping.slas.slice(0, limitShownShippingInformation).map((sla, index: number) => (
           <p key={index} className={handles.sellerShippingText}>
             <FormattedMessage
               id="store/seller-list.shipping-estimate"
@@ -32,8 +34,8 @@ const SellerShipping: StorefrontFunctionComponent = () => {
           </p>
         ))
       ) : (
-        <FormattedMessage id="store/seller-list.pending" />
-      )}
+          <FormattedMessage id="store/seller-list.pending" />
+        )}
     </div>
   )
 }
