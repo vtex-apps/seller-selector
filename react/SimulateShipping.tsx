@@ -8,7 +8,7 @@ import {
   PostalCodeGetter,
 } from 'vtex.address-form'
 import { StyleguideInput } from 'vtex.address-form/inputs'
-import { Button } from 'vtex.styleguide'
+import { Button, Spinner } from 'vtex.styleguide'
 import useProduct from 'vtex.product-context/useProduct'
 import { addValidation } from 'vtex.address-form/helpers'
 import { FormattedMessage } from 'react-intl'
@@ -18,15 +18,18 @@ import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import { useSellerContext } from './SellerContext'
 import { getNewAddress } from './utils'
 
+
 const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShipping',
   'simulateShippingSearch',
+  'simulateShippingSpinner'
 ] as const
 
 const SimulateShipping: FC = () => {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
   const { selectedItem, selectedQuantity } = useProduct()
   const { setShippingQuotes } = useSellerContext()
+  const [isLoading, SetIsLoading] = useState(false)
   let shippingItems = null
 
   const client = useApolloClient()
@@ -56,12 +59,14 @@ const SimulateShipping: FC = () => {
   )
 
   const updateShippingQuotes = (postalCode: string) => {
+    SetIsLoading(true)
     client
       .query({
         query: SimulateShippingQuery,
         variables: { ...variables, postalCode },
       })
-      .then(result => setShippingQuotes(result.data.shipping))
+      .then(result => { console.log('Loading', result.loading); setShippingQuotes(result.data.shipping) })
+      .finally(() => SetIsLoading(false))
   }
 
   const handleAddressChange = (newAddress: any) => {
@@ -72,6 +77,13 @@ const SimulateShipping: FC = () => {
     setAddress(updatedAddress)
     if (updatedAddress.postalCode.valid)
       updateShippingQuotes(updatedAddress.postalCode.value)
+  }
+
+  const showSpinner = () => {
+    if (isLoading)
+      return <div className={`${handles.simulateShippingSpinner} ml4 mt6`}><Spinner /></div>
+    else
+      return null
   }
 
   return (
@@ -95,6 +107,7 @@ const SimulateShipping: FC = () => {
       >
         <FormattedMessage id="store/seller-list.shipping-label" />
       </Button>
+      {showSpinner()}
     </div>
   )
 }
