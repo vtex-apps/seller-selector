@@ -3,6 +3,10 @@
 =� =� =�
 =� Don't fork this project. Use, [contribute](https://github.com/vtex-apps/awesome-io#contributing), or open issues through [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
+![exampleLayout](https://user-images.githubusercontent.com/53904010/78715148-595eea00-78f3-11ea-90fa-dc38c37a80d8.png)
+
+![exampleLink](https://user-images.githubusercontent.com/53904010/78715203-6f6caa80-78f3-11ea-8b7a-10bc72f354a8.png)
+
 # VTEX Seller Selector
 Seller Selector enables your visitors to easily see how many sellers your marketplace has for certain products, check their prices
 and add then to their cart.
