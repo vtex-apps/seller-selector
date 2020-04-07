@@ -165,16 +165,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `simulateShippingSearch`        |
 | `simulateShippingSpinner`       |
 
-## Preview:
-
-## Usage:
-
-## Installation:
-
-### To Do:
-
-- Write Documentation
-
-**Upcoming documentation:**
-
- - [Added new CSS Handles](https://github.com/vtex-apps/seller-selector/pull/1)
