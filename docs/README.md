@@ -138,7 +138,7 @@ According to the Seller Selector composition, it can be highly customizable usin
 # Props Configuration
 
 
-##### Seller Selector
+#### seller-table
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
@@ -146,8 +146,15 @@ According to the Seller Selector composition, it can be highly customizable usin
 | `isOneClickBuy`          | `Boolean` | Whether the button button add the product to the cart and stay in the page or not                                                                                                                        | false         |
 
 
+#### seller-add-to-cart
 
-##### SellerHeadCell
+| Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `isOneClickBuy`          | `Boolean` | Whether the button button add the product to the cart and stay in the page or not                                                                                                                        | false         |
+
+
+
+#### seller-head-cell
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
