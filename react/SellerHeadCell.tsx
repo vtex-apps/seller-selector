@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCssHandles } from 'vtex.css-handles'
+import { defineMessages } from 'react-intl'
 
 const SELLERS_CSS_HANDLES = ['sellerHeadCell', 'sellerHeadText'] as const
 
@@ -25,6 +26,30 @@ const SellerHeadCell: StorefrontFunctionComponent<Props> = ({
       {children}
     </div>
   )
+}
+
+const messages = defineMessages({
+  title: {
+    defaultMessage: '',
+    id: 'admin/editor.seller-selector.head-cell'
+  },
+  text: {
+    defaultMessage: '',
+    id: 'admin/editor.seller-selector.head-cell-text'
+  }
+})
+
+
+SellerHeadCell.schema = {
+  title: messages.title.id,
+  type: 'object',
+  properties: {
+    title: {
+      title: messages.text.id,
+      type: 'string',
+      default: '',
+    }
+  }
 }
 
 export default SellerHeadCell

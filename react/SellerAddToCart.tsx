@@ -4,6 +4,7 @@ import { useCssHandles } from 'vtex.css-handles'
 import useProduct from 'vtex.product-context/useProduct'
 
 import { useCurrentSeller } from './CurrentSellerContext'
+import { defineMessages } from 'react-intl'
 
 const SELLERS_CSS_HANDLES = ['sellerBuyContainer'] as const
 
@@ -38,5 +39,29 @@ const SellerAddToCart: StorefrontFunctionComponent<Props> = ({
     </div>
   )
 }
+
+const messages = defineMessages({
+  title: {
+    defaultMessage: '',
+    id: 'admin/editor.seller-selector.add-to-cart',
+  },
+  isOneClickBuy: {
+    defaultMessage: '',
+    id: 'admin/editor.seller-selector.oneClickBuy-title'
+  }
+})
+
+SellerAddToCart.schema = {
+  title: messages.title.id,
+  type: 'object',
+  properties: {
+    isOneClickBuy: {
+      title: messages.isOneClickBuy.id,
+      type: 'boolean',
+      default: false,
+    }
+  }
+}
+
 
 export default SellerAddToCart

@@ -2,5 +2,12 @@
   "store/seller-list.pending": "Digite o CEP para calcular",
   "store/seller-list.shipping-label": "Calcular o frete",
   "store/seller-link.linkText": "Verificar {number, plural, one {uma outra loja} other {# outras lojas}}",
-  "store/seller-list.shipping-estimate": "{name} {price} {estimate}"
+  "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
+  "admin/editor.seller-selector.title": "Seletor de vendedor",
+  "admin/editor.seller-selector.head-cell": "Cabeçalho",
+  "admin/editor.seller-selector.head-cell-text": "Texto do cabeçalho",
+  "admin/editor.seller-selector.limitShippingInformation-title": "Quantas cotações de frete devem aparecer?",
+  "admin/editor.seller-selector.limitShippingInformation-description": "Configure quantas informações de frete devem ser exibidas na tela simultaneamente, esta configuração será aplicada a todos os vendedores nessa pagina",
+  "admin/editor.seller-selector.oneClickBuy-title": "Redirect to checkout",
+  "admin/editor.seller-selector.add-to-cart": "Adicionar Ao Carrinho"
 }
