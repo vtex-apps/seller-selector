@@ -10,10 +10,7 @@
       "seller-simulate-shipping",
       "seller-head",
       "seller-body"
-    ],
-    "props": {
-      "limitShownShippingInformation": 5
-    }
+    ]
   },
   "seller-head": {
     "children": [
@@ -62,10 +59,5 @@
       "seller-price-with-shipping",
       "seller-add-to-cart"
     ]
-  },
-  "seller-add-to-cart": {
-    "props": {
-      "OneClickBuy": true
-    }
   }
 }

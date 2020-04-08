@@ -41,7 +41,7 @@ and add then to their cart.
 According to the Seller Selector composition, it can be highly customizable using it's specific blocks. Currently, its default implementation is as follows:
 
 ```json
- {
+{
   "store.sellers": {
     "blocks": [
       "seller-table"
@@ -53,10 +53,7 @@ According to the Seller Selector composition, it can be highly customizable usin
       "seller-simulate-shipping",
       "seller-head",
       "seller-body"
-    ],
-    "props": {
-      "limitShownShippingInformation": 5
-    }
+    ]
   },
   "seller-head": {
     "children": [
@@ -105,11 +102,6 @@ According to the Seller Selector composition, it can be highly customizable usin
       "seller-price-with-shipping",
       "seller-add-to-cart"
     ]
-  },
-  "seller-add-to-cart": {
-    "props": {
-      "OneClickBuy": true
-    }
   }
 }
 ```
