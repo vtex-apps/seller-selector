@@ -135,6 +135,25 @@ According to the Seller Selector composition, it can be highly customizable usin
     }
   }
 ```
+# Props Configuration
+
+
+##### Seller Selector
+
+| Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+                                                                                                                                                                                                |               |
+| `limitShownShippingInformation`       | `Number`  | Max number of shipping options to be shown.                                                                                                                                                                             | `3`         |
+| `isOneClickBuy`          | `Boolean` | Whether the button button add the product to the cart and stay in the page or not                                                                                                                        | false         |
+
+
+
+##### SellerHeadCell
+
+| Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `title`     | `String`  | Text to display on each table header cell                                                                                                                
+
 
 
 ## Customization
