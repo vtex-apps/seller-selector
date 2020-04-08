@@ -8,7 +8,7 @@ const SellerHead: StorefrontFunctionComponent = ({ children }) => {
 
   return (
     <div
-      className={`${handles.sellerHead} mt1 justify-between-s dn-s flex-m items-center-s br2 bg-muted-3 hover-bg-muted-3 active-bg-muted-3 c-on-muted-3 hover-c-on-muted-3 active-c-on-muted-3 dib`}
+      className={`${handles.sellerHead} mh7 mt1 justify-between-s dn-s flex-m items-center-s br2 bg-muted-3 hover-bg-muted-3 active-bg-muted-3 c-on-muted-3 hover-c-on-muted-3 active-c-on-muted-3 dib`}
     >
       {children}
     </div>

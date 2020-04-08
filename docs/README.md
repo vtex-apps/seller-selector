@@ -41,18 +41,22 @@ and add then to their cart.
 According to the Seller Selector composition, it can be highly customizable using it's specific blocks. Currently, its default implementation is as follows:
 
 ```json
- "store.sellers": {
-    "blocks": ["seller-table"]
+ {
+  "store.sellers": {
+    "blocks": [
+      "seller-table"
+    ]
   },
-  "flex-layout.row#productInfo": {
-    "children": ["flex-layout.col#infoRight", "flex-layout.col#infoLeft"],
-    "props": {
-      "blockClass": "sellersFlex"
-    }
-  },
-
   "seller-table": {
-    "children": ["seller-simulate-shipping", "seller-head", "seller-body"]
+    "children": [
+      "vtex.store-components:product-name",
+      "seller-simulate-shipping",
+      "seller-head",
+      "seller-body"
+    ],
+    "props": {
+      "limitShownShippingInformation": 5
+    }
   },
   "seller-head": {
     "children": [
@@ -88,9 +92,10 @@ According to the Seller Selector composition, it can be highly customizable usin
       "title": "Add To Cart"
     }
   },
-
   "seller-body": {
-    "children": ["seller-row"]
+    "children": [
+      "seller-row"
+    ]
   },
   "seller-row": {
     "children": [
@@ -105,30 +110,8 @@ According to the Seller Selector composition, it can be highly customizable usin
     "props": {
       "OneClickBuy": true
     }
-  },
-  "flex-layout.col#infoRight": {
-    "children": ["product-images"],
-    "props": {
-      "blockClass": "leftSellers",
-      "width": "15%"
-    }
-  },
-  "flex-layout.col#infoLeft": {
-    "children": [
-      "vtex.store-components:product-name",
-      "product-description#sellers"
-    ],
-    "props": {
-      "blockClass": "rightSellers",
-      "width": "85%"
-    }
-  },
-  "product-description#sellers": {
-    "props": {
-      "collapseContent": false,
-      "blockClass": "descriptionSellers"
-    }
   }
+}
 ```
 # Props Configuration
 

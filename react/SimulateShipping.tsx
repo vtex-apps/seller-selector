@@ -84,7 +84,7 @@ const SimulateShipping: FC = () => {
 
   return (
     <div
-      className={`${handles.simulateShipping} flex mr-auto ml-auto mw6 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
+      className={`${handles.simulateShipping} mt7 flex mr-auto ml-auto mw6 ba-s b--muted-3 pl4 pv5 pb5 mb3 br2`}
     >
       <AddressRules country={country} shouldUseIOFetching>
         <AddressContainer

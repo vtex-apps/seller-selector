@@ -1,8 +1,11 @@
 import React, { useMemo, useState } from 'react'
 import useProduct from 'vtex.product-context/useProduct'
+import { useCssHandles } from 'vtex.css-handles'
 
 import { ShippingQuote, SellerProvider } from './SellerContext'
 import { defineMessages } from 'react-intl'
+
+const SELLERS_CSS_HANDLES = ['sellerMasterContainer'] as const
 
 interface Props {
   limitShownShippingInformation: number
@@ -10,6 +13,7 @@ interface Props {
 
 
 const SellerTable: StorefrontFunctionComponent<Props> = ({ limitShownShippingInformation, children }) => {
+  const handles = useCssHandles(SELLERS_CSS_HANDLES)
   const { selectedItem } = useProduct()
   const [shippingQuotes, setShippingQuotes] = useState<ShippingQuote | null>(
     null
@@ -25,7 +29,7 @@ const SellerTable: StorefrontFunctionComponent<Props> = ({ limitShownShippingInf
     [selectedItem, shippingQuotes]
   )
 
-  return <SellerProvider value={sellerContext}>{children}</SellerProvider>
+  return <div className={`${handles.sellerMasterContainer}`} ><SellerProvider value={sellerContext}>{children}</SellerProvider></div>
 }
 
 const messages = defineMessages({
