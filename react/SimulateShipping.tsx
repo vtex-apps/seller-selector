@@ -1,6 +1,6 @@
 import React, { useState, FC } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
-import { useApolloClient } from 'react-apollo'
+import { useLazyQuery } from 'react-apollo'
 import { useRuntime } from 'vtex.render-runtime'
 import {
   AddressRules,
@@ -29,10 +29,11 @@ const SimulateShipping: FC = () => {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
   const { selectedItem, selectedQuantity } = useProduct()
   const { setShippingQuotes } = useSellerContext()
-  const [isLoading, SetIsLoading] = useState(false)
+  const [updateShippingQuotes, { loading, data }] = useLazyQuery(SimulateShippingQuery)
+
   let shippingItems = null
 
-  const client = useApolloClient()
+
   const runtime = useRuntime()
   const {
     culture: { country },
@@ -58,33 +59,24 @@ const SimulateShipping: FC = () => {
     addValidation(getNewAddress(country))
   )
 
-  const updateShippingQuotes = async (postalCode: string) => {
-    const { data, loading } = await client.query({
-      query: SimulateShippingQuery,
-      variables: { ...variables, postalCode },
-    })
-    SetIsLoading(loading);
-
-    if (data) {
-      SetIsLoading(loading)
-      setShippingQuotes(data.shipping)
-    }
+  if (data) {
+    setShippingQuotes(data.shipping)
   }
 
-  const handleAddressChange = (newAddress: any) => {
+  function handleAddressChange(newAddress: any) {
     const updatedAddress = {
       ...address,
       ...newAddress,
     }
     setAddress(updatedAddress)
     if (updatedAddress.postalCode.valid) {
-      SetIsLoading(true)
-      updateShippingQuotes(updatedAddress.postalCode.value)
+      let postalCode = updatedAddress.postalCode.value
+      updateShippingQuotes({ variables: { ...variables, postalCode } })
     }
   }
 
   const showSpinner = () => {
-    if (isLoading)
+    if (loading)
       return <div className={`${handles.simulateShippingSpinner} ml4 mt6`}><Spinner /></div>
     else
       return null
