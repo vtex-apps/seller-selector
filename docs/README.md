@@ -1,8 +1,3 @@
-# WORK IN PROGRESS
-
-=� =� =�
-=� Don't fork this project. Use, [contribute](https://github.com/vtex-apps/awesome-io#contributing), or open issues through [Store Discussion](https://github.com/vtex-apps/store-discussion).
-
 # VTEX Seller Selector
 
 ![exampleLayout](https://user-images.githubusercontent.com/53904010/78715148-595eea00-78f3-11ea-90fa-dc38c37a80d8.png)
