@@ -149,6 +149,7 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `linkSeller`                    |
 | `linkSellerText`                |
 | `linkSellerNumber`              |
+| `sellerMasterContainer`         |
 | `sellerBuyContainer`            |
 | `sellerList`                    |
 | `sellerBodyCell`                |
