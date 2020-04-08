@@ -58,15 +58,17 @@ const SimulateShipping: FC = () => {
     addValidation(getNewAddress(country))
   )
 
-  const updateShippingQuotes = (postalCode: string) => {
-    SetIsLoading(true)
-    client
-      .query({
-        query: SimulateShippingQuery,
-        variables: { ...variables, postalCode },
-      })
-      .then(result => { console.log('Loading', result.loading); setShippingQuotes(result.data.shipping) })
-      .finally(() => SetIsLoading(false))
+  const updateShippingQuotes = async (postalCode: string) => {
+    const { data, loading } = await client.query({
+      query: SimulateShippingQuery,
+      variables: { ...variables, postalCode },
+    })
+    SetIsLoading(loading);
+
+    if (data) {
+      SetIsLoading(loading)
+      setShippingQuotes(data.shipping)
+    }
   }
 
   const handleAddressChange = (newAddress: any) => {
@@ -75,8 +77,10 @@ const SimulateShipping: FC = () => {
       ...newAddress,
     }
     setAddress(updatedAddress)
-    if (updatedAddress.postalCode.valid)
+    if (updatedAddress.postalCode.valid) {
+      SetIsLoading(true)
       updateShippingQuotes(updatedAddress.postalCode.value)
+    }
   }
 
   const showSpinner = () => {
