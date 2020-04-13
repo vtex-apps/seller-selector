@@ -35,7 +35,9 @@ and add then to their cart.
     ]
   },
 ```
-3. The page cointaining all sellers will be displayed automatically, but you can configure the page layout and props for each block.
+
+By declaring the `link-seller` block, a page containing all available sellers will be displayed automatically. However, you can configure the Seller Selector page layout, using props for each one of the blocks used to build it behind the scenes. 
+
 
 # Advanced Configuration
 Behind the scenes, the Seller Selector page uses the following default implementation:
