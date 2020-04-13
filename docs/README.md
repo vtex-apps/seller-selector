@@ -1,4 +1,4 @@
-# VTEX Seller Selector
+# Seller Selector
 
 ![exampleLayout](https://user-images.githubusercontent.com/53904010/78715148-595eea00-78f3-11ea-90fa-dc38c37a80d8.png)
 
@@ -159,4 +159,3 @@ In order to apply CSS customizations in this and other blocks, follow the instru
 | `simulateShipping`              |
 | `simulateShippingSearch`        |
 | `simulateShippingSpinner`       |
-
