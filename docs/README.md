@@ -5,7 +5,7 @@
 Seller Selector enables your visitors to easily see how many sellers your marketplace has for certain products, check their prices
 and add then to their cart.
 
-## Configuration:
+## Configuration
 
 1. Import the Seller Selector app to your theme's dependencies in the `manifest.json` as shown below:
 
