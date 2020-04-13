@@ -127,7 +127,7 @@ Behind the scenes, the Seller Selector page uses the following default implement
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `title`     | `String`  | Text to display on each table header cell                                                                                                                
+| `title`     | `string`  | Text displayed on each table header cell. | `undefined`|                                                                                                                 
 
 
 
