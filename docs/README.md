@@ -14,9 +14,9 @@ Seller Selector displays the number of sellers your marketplace has for each pro
 }
 ```
 
-2. Add the `link-seller` block inside your product page, this will enable a link to the Seller Selector main page, for example:
+2. Add the `link-seller` block, exported by the `vtex.sellerselector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
 
-```json
+```diff
 "flex-layout.col#right-col": {
     "props": {
       "preventVerticalStretch": true,
@@ -24,7 +24,7 @@ Seller Selector displays the number of sellers your marketplace has for each pro
     },
     "children": [
       "product-name",
-      "link-seller"
++     "link-seller"
       "product-price#product-details",
       "product-separator",
       "flex-layout.row#buy-button",
@@ -33,11 +33,12 @@ Seller Selector displays the number of sellers your marketplace has for each pro
       "share#default"
     ]
   },
-```
-3. The page cointaining all sellers will be displayed automatically, but you can configure the page layout and props for each block.
+
+By declaring the `link-seller` block, a page containing all available sellers will be displayed automatically. However, you can configure the Seller Selector page layout, using props for each one of the blocks used to build it behind the scenes. 
+
 
 # Advanced Configuration
-According to the Seller Selector composition, it can be highly customizable using it's specific blocks. Currently, its default implementation is as follows:
+Behind the scenes, the Seller Selector page uses the following default implementation:
 
 ```json
 {
@@ -107,26 +108,26 @@ According to the Seller Selector composition, it can be highly customizable usin
 # Props Configuration
 
 
-#### seller-table
+### `seller-table` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `limitShownShippingInformation`       | `Number`  | Max number of shipping options to be shown.                                                                                                                                                                             | `3`         |
+| `limitShownShippingInformation`       | `number`  | Max number of shipping options to be displayed.                                                                                                                                                                             | `3`         |
 
 
-#### seller-add-to-cart
-
-| Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
-| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `isOneClickBuy`          | `Boolean` | Whether the button button add the product to the cart and stay in the page or not                                                                                                                        | false         |
-
-
-
-#### seller-head-cell
+### `seller-add-to-cart` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `title`     | `String`  | Text to display on each table header cell                                                                                                                
+| `isOneClickBuy`          | `boolean` | Defines if users will keep navigating in the same page once the Buy button was clicked on (`true`) or if they will be redirected (`false`)   | `false`         |
+
+
+
+### `seller-head-cell` props
+
+| Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `title`     | `string`  | Text displayed on each table header cell. | `undefined`|                                                                                                                 
 
 
 
