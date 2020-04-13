@@ -115,11 +115,11 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `limitShownShippingInformation`       | `number`  | Max number of shipping options to be displayed.                                                                                                                                                                             | `3`         |
 
 
-#### seller-add-to-cart
+### `seller-add-to-cart` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `isOneClickBuy`          | `Boolean` | Whether the button button add the product to the cart and stay in the page or not                                                                                                                        | false         |
+| `isOneClickBuy`          | `boolean` | Defines if users will keep navigating in the same page once the Buy button was clicked on (`true`) or if they will be redirected (`false`)   | `false`         |
 
 
 
