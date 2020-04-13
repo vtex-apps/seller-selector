@@ -108,11 +108,11 @@ Behind the scenes, the Seller Selector page uses the following default implement
 # Props Configuration
 
 
-#### seller-table
+### `seller-table` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `limitShownShippingInformation`       | `Number`  | Max number of shipping options to be shown.                                                                                                                                                                             | `3`         |
+| `limitShownShippingInformation`       | `number`  | Max number of shipping options to be displayed.                                                                                                                                                                             | `3`         |
 
 
 #### seller-add-to-cart
