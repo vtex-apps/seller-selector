@@ -7,7 +7,7 @@ and add then to their cart.
 
 ## Configuration
 
-1. Import the Seller Selector app to your theme's dependencies in the `manifest.json` as shown below:
+1. Add the Seller Selector app to your theme's dependencies in the `manifest.json` as shown below:
 
 ```json
 "dependencies": {
