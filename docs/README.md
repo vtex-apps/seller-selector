@@ -33,6 +33,7 @@ Seller Selector displays the number of sellers your marketplace has for each pro
       "share#default"
     ]
   },
+```
 
 By declaring the `link-seller` block, a page containing all available sellers will be displayed automatically. However, you can configure the Seller Selector page layout, using props for each one of the blocks used to build it behind the scenes. 
 
@@ -40,7 +41,7 @@ By declaring the `link-seller` block, a page containing all available sellers wi
 # Advanced Configuration
 Behind the scenes, the Seller Selector page uses the following default implementation:
 
-```json
+```diff
 {
   "store.sellers": {
     "blocks": [
@@ -105,8 +106,20 @@ Behind the scenes, the Seller Selector page uses the following default implement
   }
 }
 ```
-# Props Configuration
 
+| Block name   | Description  |
+| -------- | ------------------------ |
+| `seller-table`     |  Layout block that enables a table for you to build the seller-selector page using it's composition blocks
+| `seller-simulate-shipping`  | Block that builds a form for the user to add their postal code, and simulate the shipping costs to his address |
+| `seller-head`  | Builds a header to be used on the seller-selector table |
+| `seller-head-cell` | Used to define each title per column inside the table header |
+| `seller-body`  | Builds a body to load all the sellers info inside the table |
+| `seller-row`  | Set a division to be used inside the seller table, each block inside it creates a new column to be loaded |
+| `seller-name` | Displays the seller name for each seller connected to the specific product context |
+| `seller-price` | Displays the seller price for each seller connected to the specific product context |
+| `seller-shipping` | Shipping cost considering the seller informations |
+| `seller-price-with-shipping` | Shipping cost plus the product price for the user to understand the purchase final cost |
+| `seller-add-to-cart` | Builds a buy button that adds to the store cart the product connected with the specific row seller  |
 
 ### `seller-table` props
 
