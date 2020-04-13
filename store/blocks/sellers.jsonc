@@ -73,8 +73,11 @@
   },
   "seller-add-to-cart": {
     "props": {
-      "OneClickBuy": true
-    }
+      "isOneClickBuy": true
+    },
+    "blocks": [
+      "buy-button"
+    ]
   },
   "flex-layout.col#infoRight": {
     "children": [
