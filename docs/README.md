@@ -17,7 +17,7 @@ and add then to their cart.
 
 2. Add the `link-seller` block, exported by the `vtex.sellerselector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
 
-```json
+```diff
 "flex-layout.col#right-col": {
     "props": {
       "preventVerticalStretch": true,
@@ -25,7 +25,7 @@ and add then to their cart.
     },
     "children": [
       "product-name",
-      "link-seller"
++     "link-seller"
       "product-price#product-details",
       "product-separator",
       "flex-layout.row#buy-button",
@@ -34,7 +34,6 @@ and add then to their cart.
       "share#default"
     ]
   },
-```
 
 By declaring the `link-seller` block, a page containing all available sellers will be displayed automatically. However, you can configure the Seller Selector page layout, using props for each one of the blocks used to build it behind the scenes. 
 
