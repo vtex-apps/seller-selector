@@ -21,7 +21,8 @@
     "vtex.render-runtime": "8.x",
     "vtex.flex-layout": "0.x",
     "vtex.format-currency": "0.x",
-    "vtex.address-form": "4.x"
+    "vtex.address-form": "4.x",
+    "vtex.add-to-cart-button": "0.x"
   },
   "registries": [
     "smartcheckout"

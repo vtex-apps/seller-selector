@@ -49,7 +49,11 @@
     "component": "SellerShipping"
   },
   "seller-add-to-cart": {
-    "component": "SellerAddToCart"
+    "component": "SellerAddToCart",
+    "allowed": [
+      "add-to-cart-button",
+      "buy-button"
+    ]
   },
   "seller-simulate-shipping": {
     "component": "SimulateShipping"

@@ -1,10 +1,8 @@
 import React from 'react'
-import BuyButton from 'vtex.store-components/BuyButton'
 import { useCssHandles } from 'vtex.css-handles'
-import useProduct from 'vtex.product-context/useProduct'
-
 import { useCurrentSeller } from './CurrentSellerContext'
 import { defineMessages } from 'react-intl'
+import { ExtensionPoint } from 'vtex.render-runtime'
 
 const SELLERS_CSS_HANDLES = ['sellerBuyContainer'] as const
 
@@ -15,7 +13,6 @@ interface Props {
 const SellerAddToCart: StorefrontFunctionComponent<Props> = ({
   isOneClickBuy,
 }) => {
-  const { product, selectedItem, selectedQuantity } = useProduct()
   const { currentSeller } = useCurrentSeller()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
@@ -23,19 +20,8 @@ const SellerAddToCart: StorefrontFunctionComponent<Props> = ({
     <div
       className={`${handles.sellerBuyContainer} items-center tc br2 ph6 pv4 ma0 w-100-s w-20-m`}
     >
-      <BuyButton
-        skuItems={BuyButton.mapCatalogItemToCart({
-          product,
-          selectedItem,
-          selectedSeller: currentSeller,
-          selectedQuantity,
-        })}
-        available={
-          currentSeller && currentSeller.commertialOffer.AvailableQuantity > 0
-        }
-        isOneClickBuy={isOneClickBuy}
-        shouldAddToCart
-      ></BuyButton>
+      <ExtensionPoint id="add-to-cart-button" {...{ isOneClickBuy, selectedSeller: currentSeller }} />
+      <ExtensionPoint id="buy-button" {...{ isOneClickBuy, selectedSeller: currentSeller }} />
     </div>
   )
 }
