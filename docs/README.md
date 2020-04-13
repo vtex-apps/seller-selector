@@ -15,7 +15,7 @@ and add then to their cart.
 }
 ```
 
-2. Add the `link-seller` block inside your product page, this will enable a link to the Seller Selector main page, for example:
+2. Add the `link-seller` block, exported by the `vtex.sellerselector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
 
 ```json
 "flex-layout.col#right-col": {
