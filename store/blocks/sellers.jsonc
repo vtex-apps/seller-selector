@@ -59,5 +59,10 @@
       "seller-price-with-shipping",
       "seller-add-to-cart"
     ]
+  },
+  "seller-add-to-cart": {
+    "blocks": [
+      "buy-button"
+    ]
   }
 }
