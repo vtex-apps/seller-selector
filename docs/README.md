@@ -41,7 +41,7 @@ By declaring the `link-seller` block, a page containing all available sellers wi
 # Advanced Configuration
 Behind the scenes, the Seller Selector page uses the following default implementation:
 
-```diff
+```json
 {
   "store.sellers": {
     "blocks": [
