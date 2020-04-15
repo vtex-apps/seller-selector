@@ -131,7 +131,7 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `limitShownShippingInformation`       | `number`  | Max number of shipping options to be displayed.                                                                                                                                                                             | `3`         |
 
 
-### `seller-add-to-cart` props
+#### `seller-add-to-cart` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
