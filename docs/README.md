@@ -147,6 +147,13 @@ Behind the scenes, the Seller Selector page uses the following default implement
 
 
 
+## Modus operandi
+The Seller Selector app fetch seller's data automatically from the [admin's Catalog ](https://help.vtex.com/tutorial/configuring-the-seller--tutorials_392). 
+Behind the scenes, the blocks exported from the app use the product context in which they are inserted to identify the seller's data in the SKU registry. 
+Based on this, they are able to display seller data without having to declare each desired seller in your theme.
+
+
+
 ## Customization
 
 In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
