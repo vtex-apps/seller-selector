@@ -107,7 +107,6 @@ Behind the scenes, the Seller Selector page uses the following default implement
 }
 ```
 
-Now, you are able to build your own page listing the sellers of a product, you can check below the description for each block:
 
 
 | Block name   | Description  |
