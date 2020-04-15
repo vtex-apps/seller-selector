@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.1.0] - 2020-03-20
 
+## [0.1.4] - 2020-04-08
+### Added
+- README adjustments
+
 ## [0.1.3] - 2020-04-08
 ### Added
 - README adjustments
