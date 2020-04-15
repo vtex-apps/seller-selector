@@ -139,11 +139,11 @@ Behind the scenes, the Seller Selector page uses the following default implement
 
 
 
-### `seller-head-cell` props
+#### `seller-head-cell` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `title`     | `string`  | Text displayed on each table header cell. | `undefined`|                                                                                                                 
+| `title`     | `string`  | Text displayed on the table header for each column. | `undefined`|                                                                                                                 
 
 
 
