@@ -126,7 +126,9 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `seller-price` | Displays the seller price for a given product. |
 | `seller-shipping` | Displays shipping cost considering the sellers' data. |
 | `seller-price-with-shipping` | Displays the purchase final cost (shipping cost + product price). |
-| `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart. It's possible to use two different blocks inside it: `buy-button` or `add-to-cart-button` |
+| `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart. It is important to use `buy-button` or `add-to-cart-button` as a child block for this component|
+|`buy-button`  | Default buy button |
+|`add-to-cart-button`  | Buy button to use with Minicart.V2 and Go Commerce Stores |
 
 
 #### `seller-table` props
