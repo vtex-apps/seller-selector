@@ -20,7 +20,7 @@ const SellerShipping: StorefrontFunctionComponent = () => {
     >
       {shipping ? (
         shipping.slas.slice(0, limitShownShippingInformation).map((sla, index: number) => (
-          <p key={index} className={handles.sellerShippingText}>
+          <p key={index} className={`${handles.sellerShippingText} ma0`}>
             <FormattedMessage
               id="store/seller-list.shipping-estimate"
               values={{

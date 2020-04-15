@@ -24,3 +24,30 @@
   margin-left: 0.875rem;
   margin-top: 1.5rem;
 }
+
+.vtex-sellerselector-0-x-sellerMasterContainer h1{
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.vtex-sellerselector-0-x-sellerShippingText , .vtex-sellerselector-0-x-sellerPriceShippingText{
+  padding: 5px;;
+  min-height: 50px;
+}
+
+.vtex-sellerselector-0-x-sellerShippingText:nth-child(even) , .vtex-sellerselector-0-x-sellerPriceShippingText:nth-child(even){
+  background-color: #b0b0b085;
+}
+
+@media only screen and (max-width: 540px) {
+  .vtex-sellerselector-0-x-simulateShipping{
+    flex-direction: column;
+    padding: 10px;
+    margin: 35px;
+  }
+  .vtex-sellerselector-0-x-sellerName{
+    background: #cacbcc;
+    border-radius: 0px;
+  }
+}

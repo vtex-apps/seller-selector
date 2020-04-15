@@ -15,10 +15,10 @@ const SellerHeadCell: StorefrontFunctionComponent<Props> = ({
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
-    <div className={`${handles.sellerHeadCell}`}>
+    <div className={`${handles.sellerHeadCell} w-20`}>
       {title ? (
         <h5
-          className={`${handles.sellerHeadText} items-center tc w-20 ph6 pv4 ma0 t-heading-5`}
+          className={`${handles.sellerHeadText} items-center tc ph6 pv4 ma0 t-heading-6`}
         >
           {title}
         </h5>
