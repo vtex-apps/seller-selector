@@ -112,17 +112,17 @@ Now, you are able to build your own page listing the sellers of a product, you c
 
 | Block name   | Description  |
 | -------- | ------------------------ |
-| `seller-table`     |  Layout block that enables a table for you to build the seller-selector page using it's composition blocks. It's possible to use three main blocks `seller-simulate-shipping`, `seller-head`, `seller-body` inside this one.
-| `seller-simulate-shipping`  | Block that builds a form for the user to add their postal code, and simulate the shipping costs to his address |
-| `seller-head`  | Builds a header to be used on the seller-selector table. You can use `seller-head-cell` inside this block|
-| `seller-head-cell` | Used to define each title per column inside the table header. |
-| `seller-body`  | Builds a body to load all the sellers info inside the table |
-| `seller-row`  | Set a division to be used inside the seller table, each block inside it creates a new column to be loade. You can use `seller-name`, `seller-price`, `seller-shipping`, `seller-price-with-shipping`, `seller-add-to-cart` inside this block |
-| `seller-name` | Displays the seller name for each seller connected to the specific product context |
-| `seller-price` | Displays the seller price for each seller connected to the specific product context |
-| `seller-shipping` | Shipping cost considering the seller informations |
-| `seller-price-with-shipping` | Shipping cost plus the product price for the user to understand the purchase final cost |
-| `seller-add-to-cart` | Builds a buy button that adds to the store cart the product connected with the specific row seller  |
+| `seller-table`     |  Layout block that provides a table to build the Seller Selector page with other blocks. It is possible to build the page using three main blocks: `seller-simulate-shipping`, `seller-head` and `seller-body` (declared as children of `seller-head`). 
+| `seller-simulate-shipping`  | Builds a form so users can add a postal code and then simulate the shipping costs to the desired address. |
+| `seller-head`  | Builds a header to be used on the Seller Selector table. You can pass to it the `seller-head-cell` block as children. |
+| `seller-head-cell` | Defines a title for each column in the table header. |
+| `seller-body`  | Defines the page main content. It is responsible for displaying all sellers' data in the table body.|
+| `seller-row`  | Used inside the Seller Selector table to separate seller's data into columns. You can use the blocks listed below (`seller-name`, `seller-price`, `seller-shipping`, `seller-price-with-shipping`, `seller-add-to-cart`) as `seller-row`'s children in order to provide all needed seller's data. |
+| `seller-name` | Displays the seller name. |
+| `seller-price` | Displays the seller price for a given product. |
+| `seller-shipping` | Displays shipping cost considering the sellers' data. |
+| `seller-price-with-shipping` | Displays the purchase final cost (shipping cost + product price). |
+| `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart.  |
 
 
 ### `seller-table` props
