@@ -38,7 +38,7 @@ Seller Selector displays the number of sellers your marketplace has for each pro
 By declaring the `link-seller` block, a page containing all available sellers will be displayed automatically. However, you can configure the Seller Selector page layout, using props for each one of the blocks used to build it behind the scenes. 
 
 
-# Advanced Configuration
+### Advanced Configuration
 Behind the scenes, the Seller Selector page uses the following default implementation:
 
 ```json
