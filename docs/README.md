@@ -1,6 +1,6 @@
 # Seller Selector
 
-Seller Selector displays the number of sellers your marketplace has for each product. It enables users to compare prices from each seller and add the desired product to their cart.
+Seller Selector displays the number of [**sellers**](https://help.vtex.com/tutorial/what-is-a-seller--5FkLvhZ3Few4CWWIuYOK2w) your marketplace has for each product. It enables users to compare prices from each seller and add the desired product to their cart.
 
 ![exampleLayout](https://user-images.githubusercontent.com/53904010/78715148-595eea00-78f3-11ea-90fa-dc38c37a80d8.png)
 
