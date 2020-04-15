@@ -103,6 +103,11 @@ Behind the scenes, the Seller Selector page uses the following default implement
       "seller-price-with-shipping",
       "seller-add-to-cart"
     ]
+  },
+  "seller-add-to-cart":{
+    "blocks":[
+      "buy-button"
+    ]
   }
 }
 ```
@@ -121,7 +126,7 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `seller-price` | Displays the seller price for a given product. |
 | `seller-shipping` | Displays shipping cost considering the sellers' data. |
 | `seller-price-with-shipping` | Displays the purchase final cost (shipping cost + product price). |
-| `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart.  |
+| `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart. It's possible to use two different blocks inside it: `buy-button` or `add-to-cart-button` |
 
 
 #### `seller-table` props
