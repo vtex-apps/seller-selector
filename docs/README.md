@@ -124,7 +124,7 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart.  |
 
 
-### `seller-table` props
+#### `seller-table` props
 
 | Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
