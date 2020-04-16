@@ -10,11 +10,11 @@ Seller Selector displays the number of [**sellers**](https://help.vtex.com/tutor
 
 ```json
 "dependencies": {
-  "vtex.sellerselector": "0.x"
+  "vtex.seller-selector": "0.x"
 }
 ```
 
-2. Add the `link-seller` block, exported by the `vtex.sellerselector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
+2. Add the `link-seller` block, exported by the `vtex.seller-selector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
 
 ```diff
 "flex-layout.col#right-col": {
