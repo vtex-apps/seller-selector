@@ -6,7 +6,12 @@ Seller Selector displays the number of [**sellers**](https://help.vtex.com/tutor
 
 ## Configuration
 
-1. Add the Seller Selector app to your theme's dependencies in the `manifest.json` as shown below:
+1. Install the Seller Selector app to your store with the following command:
+```sh
+vtex install vtex.seller-selector@0.x
+```
+
+2. Add the Seller Selector app to your theme's dependencies in the `manifest.json` as shown below:
 
 ```json
 "dependencies": {
@@ -14,7 +19,7 @@ Seller Selector displays the number of [**sellers**](https://help.vtex.com/tutor
 }
 ```
 
-2. Add the `link-seller` block, exported by the `vtex.seller-selector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
+3. Add the `link-seller` block, exported by the `vtex.seller-selector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
 
 ```diff
 "flex-layout.col#right-col": {
