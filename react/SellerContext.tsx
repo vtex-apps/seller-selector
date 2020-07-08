@@ -56,3 +56,5 @@ export const SellerProvider: FC<ProviderProps> = ({ value, children }) => {
     <SellerContext.Provider value={value}>{children}</SellerContext.Provider>
   )
 }
+
+export default SellerContext
