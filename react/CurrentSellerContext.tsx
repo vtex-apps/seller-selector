@@ -30,3 +30,5 @@ export const CurrentSellerProvider: FC<ProviderProps> = ({
     </CurrentSellerContext.Provider>
   )
 }
+
+export default CurrentSellerContext
