@@ -39,8 +39,8 @@ interface SellerContextValue {
 const SellerContext = createContext<SellerContextValue>({
   sellerList: null,
   shippingQuotes: null,
-  setShippingQuotes: () => { },
-  limitShownShippingInformation: 3
+  setShippingQuotes: () => {},
+  limitShownShippingInformation: 3,
 })
 
 export const useSellerContext = (): SellerContextValue => {

@@ -21,19 +21,21 @@ const SellerPriceWithShipping: StorefrontFunctionComponent = () => {
       className={`${handles.sellerPriceShipping} ma0 items-center tc br2 ph6 pv4 ma0 w-100-s w-20-m`}
     >
       {shipping ? (
-        shipping.slas.slice(0, limitShownShippingInformation).map((sla, index: number) => (
-          <p key={index} className={`${handles.sellerPriceShippingText} ma0`}>
-            <FormattedCurrency
-              value={
-                sla.price / 100.0 +
-                (currentSeller ? currentSeller.commertialOffer.Price : 0)
-              }
-            />
-          </p>
-        ))
+        shipping.slas
+          .slice(0, limitShownShippingInformation)
+          .map((sla, index: number) => (
+            <p key={index} className={`${handles.sellerPriceShippingText} ma0`}>
+              <FormattedCurrency
+                value={
+                  sla.price / 100.0 +
+                  (currentSeller ? currentSeller.commertialOffer.Price : 0)
+                }
+              />
+            </p>
+          ))
       ) : (
-          <FormattedMessage id="store/seller-list.pending" />
-        )}
+        <FormattedMessage id="store/seller-list.pending" />
+      )}
     </div>
   )
 }
