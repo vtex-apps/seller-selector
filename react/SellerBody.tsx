@@ -29,13 +29,13 @@ const SellerBody: StorefrontFunctionComponent = ({ children }) => {
     <div className={`${handles.sellerList} mh7 mb7`}>
       {sellerList
         ? sellerList.map((current, index: number) => (
-          <CurrentSellerProvider
-            value={currentSellerCreate(current, index)}
-            key={index}
-          >
-            {children}
-          </CurrentSellerProvider>
-        ))
+            <CurrentSellerProvider
+              value={currentSellerCreate(current, index)}
+              key={index}
+            >
+              {children}
+            </CurrentSellerProvider>
+          ))
         : null}
     </div>
   )

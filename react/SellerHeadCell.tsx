@@ -31,14 +31,13 @@ const SellerHeadCell: StorefrontFunctionComponent<Props> = ({
 const messages = defineMessages({
   title: {
     defaultMessage: '',
-    id: 'admin/editor.seller-selector.head-cell'
+    id: 'admin/editor.seller-selector.head-cell',
   },
   text: {
     defaultMessage: '',
-    id: 'admin/editor.seller-selector.head-cell-text'
-  }
+    id: 'admin/editor.seller-selector.head-cell-text',
+  },
 })
-
 
 SellerHeadCell.schema = {
   title: messages.title.id,
@@ -48,8 +47,8 @@ SellerHeadCell.schema = {
       title: messages.text.id,
       type: 'string',
       default: '',
-    }
-  }
+    },
+  },
 }
 
 export default SellerHeadCell

@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react'
 import useProduct from 'vtex.product-context/useProduct'
 import { useCssHandles } from 'vtex.css-handles'
+import { defineMessages } from 'react-intl'
 
 import { ShippingQuote, SellerProvider } from './SellerContext'
-import { defineMessages } from 'react-intl'
 
 const SELLERS_CSS_HANDLES = ['sellerMasterContainer'] as const
 
@@ -11,8 +11,10 @@ interface Props {
   limitShownShippingInformation: number
 }
 
-
-const SellerTable: StorefrontFunctionComponent<Props> = ({ limitShownShippingInformation, children }) => {
+const SellerTable: StorefrontFunctionComponent<Props> = ({
+  limitShownShippingInformation,
+  children,
+}) => {
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
   const { selectedItem } = useProduct()
   const [shippingQuotes, setShippingQuotes] = useState<ShippingQuote | null>(
@@ -24,29 +26,34 @@ const SellerTable: StorefrontFunctionComponent<Props> = ({ limitShownShippingInf
       sellerList: selectedItem ? selectedItem.sellers : null,
       shippingQuotes,
       setShippingQuotes,
-      limitShownShippingInformation: limitShownShippingInformation ? limitShownShippingInformation : 3
+      limitShownShippingInformation: limitShownShippingInformation
+        ? limitShownShippingInformation
+        : 3,
     }),
     [selectedItem, shippingQuotes]
   )
 
-  return <div className={`${handles.sellerMasterContainer}`} ><SellerProvider value={sellerContext}>{children}</SellerProvider></div>
+  return (
+    <div className={`${handles.sellerMasterContainer}`}>
+      <SellerProvider value={sellerContext}>{children}</SellerProvider>
+    </div>
+  )
 }
 
 const messages = defineMessages({
   title: {
     defaultMessage: '',
-    id: 'admin/editor.seller-selector.title'
+    id: 'admin/editor.seller-selector.title',
   },
   shippingInformationTitle: {
     defaultMessage: '',
-    id: 'admin/editor.seller-selector.limitShippingInformation-title'
+    id: 'admin/editor.seller-selector.limitShippingInformation-title',
   },
   shippingInformationDescription: {
     defaultMessage: '',
-    id: 'admin/editor.seller-selector.limitShippingInformation-description'
-  }
+    id: 'admin/editor.seller-selector.limitShippingInformation-description',
+  },
 })
-
 
 SellerTable.schema = {
   title: messages.title.id,
@@ -56,9 +63,9 @@ SellerTable.schema = {
       title: messages.shippingInformationTitle.id,
       description: messages.shippingInformationDescription.id,
       type: 'number',
-      default: 3
-    }
-  }
+      default: 3,
+    },
+  },
 }
 
 export default SellerTable

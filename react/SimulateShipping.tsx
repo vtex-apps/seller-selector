@@ -18,21 +18,21 @@ import SimulateShippingQuery from './queries/SimulateShipping.gql'
 import { useSellerContext } from './SellerContext'
 import { getNewAddress } from './utils'
 
-
 const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShipping',
   'simulateShippingSearch',
-  'simulateShippingSpinner'
+  'simulateShippingSpinner',
 ] as const
 
 const SimulateShipping: FC = () => {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
   const { selectedItem, selectedQuantity } = useProduct()
   const { setShippingQuotes } = useSellerContext()
-  const [updateShippingQuotes, { loading, data }] = useLazyQuery(SimulateShippingQuery)
+  const [updateShippingQuotes, { loading, data }] = useLazyQuery(
+    SimulateShippingQuery
+  )
 
   let shippingItems = null
-
 
   const runtime = useRuntime()
   const {
@@ -70,16 +70,19 @@ const SimulateShipping: FC = () => {
     }
     setAddress(updatedAddress)
     if (updatedAddress.postalCode.valid) {
-      let postalCode = updatedAddress.postalCode.value
+      const postalCode = updatedAddress.postalCode.value
       updateShippingQuotes({ variables: { ...variables, postalCode } })
     }
   }
 
   const showSpinner = () => {
     if (loading)
-      return <div className={`${handles.simulateShippingSpinner} ml4 mt6`}><Spinner /></div>
-    else
-      return null
+      return (
+        <div className={`${handles.simulateShippingSpinner} ml4 mt6`}>
+          <Spinner />
+        </div>
+      )
+    else return null
   }
 
   return (
