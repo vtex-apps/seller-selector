@@ -22,7 +22,7 @@ vtex install vtex.seller-selector@0.x
 3. Add the `link-seller` block, exported by the `vtex.seller-selector` app, inside your product page (`store.product` template). When rendered, the block will create a link to the Seller Selector main page. For example:
 
 ```diff
-"flex-layout.col#right-col": {
+ "flex-layout.col#right-col": {
     "props": {
       "preventVerticalStretch": true,
       "rowGap": 0
@@ -111,7 +111,7 @@ Behind the scenes, the Seller Selector page uses the following default implement
   },
   "seller-add-to-cart":{
     "blocks":[
-      "buy-button"
+      "add-to-cart-button"
     ]
   }
 }
