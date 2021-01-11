@@ -4,14 +4,14 @@ const getRandomAddressId = () =>
   (addressId++ * new Date().getTime() * -1).toString().replace('-', '')
 
 export const getNewAddress = (country: string) => {
-  const addressId = getRandomAddressId()
+  const newAddressId = getRandomAddressId()
 
   return {
-    addressId,
+    addressId: newAddressId,
     addressType: 'residential',
     city: null,
     complement: null,
-    country: country,
+    country,
     geoCoordinates: [],
     neighborhood: null,
     number: null,

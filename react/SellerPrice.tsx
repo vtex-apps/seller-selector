@@ -6,10 +6,11 @@ import { useCurrentSeller } from './CurrentSellerContext'
 
 const SELLERS_CSS_HANDLES = ['sellerPrice'] as const
 
-const SellerPrice: StorefrontFunctionComponent = () => {
+function SellerPrice() {
   const { currentSeller } = useCurrentSeller()
 
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
+
   return (
     <p
       className={`${handles.sellerPrice} items-center tc w-100-s w-20-m br2 ph6 pv4 ma0`}

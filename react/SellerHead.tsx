@@ -1,9 +1,14 @@
 import React from 'react'
+import type { ReactNode } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 
 const SELLERS_CSS_HANDLES = ['sellerHead'] as const
 
-const SellerHead: StorefrontFunctionComponent = ({ children }) => {
+interface Props {
+  children: ReactNode
+}
+
+function SellerHead({ children }: Props) {
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (

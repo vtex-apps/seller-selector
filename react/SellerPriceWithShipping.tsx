@@ -11,7 +11,7 @@ const SELLERS_CSS_HANDLES = [
   'sellerPriceShippingText',
 ] as const
 
-const SellerPriceWithShipping: StorefrontFunctionComponent = () => {
+function SellerPriceWithShipping() {
   const { currentSeller, shipping } = useCurrentSeller()
   const { limitShownShippingInformation } = useSellerContext()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)

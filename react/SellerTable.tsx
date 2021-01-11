@@ -1,9 +1,11 @@
 import React, { useMemo, useState } from 'react'
-import useProduct from 'vtex.product-context/useProduct'
+import type { PropsWithChildren } from 'react'
+import { useProduct } from 'vtex.product-context'
 import { useCssHandles } from 'vtex.css-handles'
 import { defineMessages } from 'react-intl'
 
-import { ShippingQuote, SellerProvider } from './SellerContext'
+import { SellerProvider } from './SellerContext'
+import type { ShippingQuote } from './SellerContext'
 
 const SELLERS_CSS_HANDLES = ['sellerMasterContainer'] as const
 
@@ -11,12 +13,12 @@ interface Props {
   limitShownShippingInformation: number
 }
 
-const SellerTable: StorefrontFunctionComponent<Props> = ({
+function SellerTable({
   limitShownShippingInformation,
   children,
-}) => {
+}: PropsWithChildren<Props>) {
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
-  const { selectedItem } = useProduct()
+  const { selectedItem } = useProduct() ?? {}
   const [shippingQuotes, setShippingQuotes] = useState<ShippingQuote | null>(
     null
   )
@@ -26,11 +28,9 @@ const SellerTable: StorefrontFunctionComponent<Props> = ({
       sellerList: selectedItem ? selectedItem.sellers : null,
       shippingQuotes,
       setShippingQuotes,
-      limitShownShippingInformation: limitShownShippingInformation
-        ? limitShownShippingInformation
-        : 3,
+      limitShownShippingInformation: limitShownShippingInformation || 3,
     }),
-    [selectedItem, shippingQuotes]
+    [limitShownShippingInformation, selectedItem, shippingQuotes]
   )
 
   return (

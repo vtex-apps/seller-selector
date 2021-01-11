@@ -11,9 +11,7 @@ interface Props {
   isOneClickBuy?: boolean
 }
 
-const SellerAddToCart: StorefrontFunctionComponent<Props> = ({
-  isOneClickBuy,
-}) => {
+function SellerAddToCart({ isOneClickBuy }: Props) {
   const { currentSeller } = useCurrentSeller()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 

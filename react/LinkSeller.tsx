@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'vtex.render-runtime'
-import useProduct from 'vtex.product-context/useProduct'
+import { useProduct } from 'vtex.product-context'
 import { useCssHandles } from 'vtex.css-handles'
 import { FormattedMessage } from 'react-intl'
 
@@ -11,11 +11,11 @@ const LINK_SELLER_HANDLES = [
   'linkSellerNumber',
 ] as const
 
-const LinkSeller: StorefrontFunctionComponent = () => {
-  const { product, selectedItem } = useProduct()
+function LinkSeller() {
+  const { product, selectedItem } = useProduct() ?? {}
   const handles = useCssHandles(LINK_SELLER_HANDLES)
 
-  if (selectedItem.sellers.length <= 1) {
+  if (!selectedItem || selectedItem.sellers.length <= 1) {
     return null
   }
 
@@ -26,13 +26,13 @@ const LinkSeller: StorefrontFunctionComponent = () => {
       <Link
         className={`${handles.linkSeller}`}
         page="store.sellers"
-        params={{ slug: product.linkText }}
+        params={{ slug: product?.linkText }}
       >
         <p className={`${handles.linkSellerText} pr6`}>
           <FormattedMessage
             id="store/seller-link.linkText"
             values={{
-              number: selectedItem.sellers.length,
+              number: selectedItem?.sellers.length,
             }}
           />
         </p>
