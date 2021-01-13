@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react'
+import React, { useState } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { useLazyQuery } from 'react-apollo'
 import { useRuntime } from 'vtex.render-runtime'
@@ -9,7 +9,7 @@ import {
 } from 'vtex.address-form'
 import { StyleguideInput } from 'vtex.address-form/inputs'
 import { Button, Spinner } from 'vtex.styleguide'
-import useProduct from 'vtex.product-context/useProduct'
+import { useProduct } from 'vtex.product-context'
 import { addValidation } from 'vtex.address-form/helpers'
 import { FormattedMessage } from 'react-intl'
 import './global.css'
@@ -24,9 +24,9 @@ const SIMULATE_SHIPPING_CSS_HANDLES = [
   'simulateShippingSpinner',
 ] as const
 
-const SimulateShipping: FC = () => {
+function SimulateShipping() {
   const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
-  const { selectedItem, selectedQuantity } = useProduct()
+  const { selectedItem, selectedQuantity } = useProduct() ?? {}
   const { setShippingQuotes } = useSellerContext()
   const [updateShippingQuotes, { loading, data }] = useLazyQuery(
     SimulateShippingQuery
@@ -40,18 +40,16 @@ const SimulateShipping: FC = () => {
   } = runtime
 
   if (selectedItem) {
-    shippingItems = selectedItem.sellers.map(
-      (current: { sellerId: string }): ShippingItem => ({
-        id: selectedItem.itemId,
-        quantity: selectedQuantity.toString(),
-        seller: current.sellerId,
-      })
-    )
+    shippingItems = selectedItem.sellers.map((current) => ({
+      id: selectedItem.itemId,
+      quantity: selectedQuantity?.toString() ?? '1',
+      seller: current.sellerId,
+    }))
   }
 
   const variables = {
     shippingItems,
-    country: country,
+    country,
     postalCode: '',
   }
 
@@ -68,21 +66,25 @@ const SimulateShipping: FC = () => {
       ...address,
       ...newAddress,
     }
+
     setAddress(updatedAddress)
     if (updatedAddress.postalCode.valid) {
       const postalCode = updatedAddress.postalCode.value
+
       updateShippingQuotes({ variables: { ...variables, postalCode } })
     }
   }
 
   const showSpinner = () => {
-    if (loading)
+    if (loading) {
       return (
         <div className={`${handles.simulateShippingSpinner} ml4 mt6`}>
           <Spinner />
         </div>
       )
-    else return null
+    }
+
+    return null
   }
 
   return (
@@ -109,12 +111,6 @@ const SimulateShipping: FC = () => {
       {showSpinner()}
     </div>
   )
-}
-
-interface ShippingItem {
-  id: string
-  quantity: string
-  seller: string
 }
 
 export default SimulateShipping

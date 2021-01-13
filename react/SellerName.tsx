@@ -5,7 +5,7 @@ import { useCurrentSeller } from './CurrentSellerContext'
 
 const SELLERS_CSS_HANDLES = ['sellerName'] as const
 
-const SellerName: StorefrontFunctionComponent = () => {
+function SellerName() {
   const { currentSeller } = useCurrentSeller()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
@@ -13,7 +13,7 @@ const SellerName: StorefrontFunctionComponent = () => {
     <p
       className={`${handles.sellerName} items-center tc w-100-s w-20-m  br2 ph6 pv4 ma0 b`}
     >
-      {currentSeller && currentSeller.sellerName}
+      {currentSeller?.sellerName}
     </p>
   )
 }

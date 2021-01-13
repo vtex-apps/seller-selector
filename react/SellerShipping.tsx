@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { FormattedCurrency } from 'vtex.format-currency'
-import TranslateEstimate from 'vtex.shipping-estimate-translator/TranslateEstimate'
+import { TranslateEstimate } from 'vtex.shipping-estimate-translator'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { useCurrentSeller } from './CurrentSellerContext'
@@ -9,7 +9,7 @@ import { useSellerContext } from './SellerContext'
 
 const SELLERS_CSS_HANDLES = ['sellerShipping', 'sellerShippingText'] as const
 
-const SellerShipping: StorefrontFunctionComponent = () => {
+function SellerShipping() {
   const { shipping } = useCurrentSeller()
   const { limitShownShippingInformation } = useSellerContext()
   const handles = useCssHandles(SELLERS_CSS_HANDLES)

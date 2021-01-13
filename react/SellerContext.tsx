@@ -1,4 +1,5 @@
-import React, { createContext, useContext, FC } from 'react'
+import React, { createContext, useContext } from 'react'
+import type { PropsWithChildren } from 'react'
 
 export interface Seller {
   sellerId: string
@@ -51,7 +52,10 @@ interface ProviderProps {
   value: SellerContextValue
 }
 
-export const SellerProvider: FC<ProviderProps> = ({ value, children }) => {
+export function SellerProvider({
+  value,
+  children,
+}: PropsWithChildren<ProviderProps>) {
   return (
     <SellerContext.Provider value={value}>{children}</SellerContext.Provider>
   )

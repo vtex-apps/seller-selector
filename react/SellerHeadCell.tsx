@@ -1,4 +1,5 @@
 import React from 'react'
+import type { PropsWithChildren } from 'react'
 import { useCssHandles } from 'vtex.css-handles'
 import { defineMessages } from 'react-intl'
 
@@ -8,10 +9,7 @@ interface Props {
   title: string
 }
 
-const SellerHeadCell: StorefrontFunctionComponent<Props> = ({
-  title,
-  children,
-}) => {
+function SellerHeadCell({ title, children }: PropsWithChildren<Props>) {
   const handles = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
