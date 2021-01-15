@@ -27,6 +27,7 @@ function LinkSeller() {
         className={`${handles.linkSeller}`}
         page="store.sellers"
         params={{ slug: product?.linkText }}
+        query={selectedItem ? `skuId=${selectedItem.itemId}` : ''}
       >
         <p className={`${handles.linkSellerText} pr6`}>
           <FormattedMessage
