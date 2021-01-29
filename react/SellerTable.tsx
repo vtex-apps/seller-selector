@@ -25,7 +25,11 @@ function SellerTable({
 
   const sellerContext = useMemo(
     () => ({
-      sellerList: selectedItem ? selectedItem.sellers : null,
+      sellerList: selectedItem
+        ? selectedItem.sellers.filter(
+            (seller) => seller.commertialOffer.AvailableQuantity > 0
+          )
+        : null,
       shippingQuotes,
       setShippingQuotes,
       limitShownShippingInformation: limitShownShippingInformation || 3,

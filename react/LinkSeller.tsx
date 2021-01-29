@@ -15,7 +15,11 @@ function LinkSeller() {
   const { product, selectedItem } = useProduct() ?? {}
   const handles = useCssHandles(LINK_SELLER_HANDLES)
 
-  if (!selectedItem || selectedItem.sellers.length <= 1) {
+  const availableSellers = selectedItem?.sellers.filter(
+    (seller) => seller.commertialOffer.AvailableQuantity > 0
+  )
+
+  if (!selectedItem || !availableSellers || availableSellers.length <= 1) {
     return null
   }
 
@@ -33,7 +37,7 @@ function LinkSeller() {
           <FormattedMessage
             id="store/seller-link.linkText"
             values={{
-              number: selectedItem?.sellers.length,
+              number: availableSellers.length,
             }}
           />
         </p>
