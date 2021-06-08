@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from 'react'
 import type { PropsWithChildren } from 'react'
+import type { ProductTypes } from 'vtex.product-context'
 
 export interface Seller {
   sellerId: string
@@ -11,6 +12,7 @@ export interface Seller {
 interface Offer {
   Price: number
   AvailableQuantity: number
+  Installments: ProductTypes.Installment[]
 }
 
 export interface ShippingQuote {

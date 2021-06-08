@@ -9,7 +9,7 @@ const SELLERS_CSS_HANDLES = ['sellerPrice'] as const
 function SellerPrice() {
   const { currentSeller } = useCurrentSeller()
 
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
     <p

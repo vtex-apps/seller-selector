@@ -9,7 +9,7 @@ interface Props {
 }
 
 function SellerBodyCell({ children }: Props) {
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
     <div

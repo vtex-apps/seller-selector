@@ -17,7 +17,7 @@ function SellerTable({
   limitShownShippingInformation,
   children,
 }: PropsWithChildren<Props>) {
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
   const { selectedItem } = useProduct() ?? {}
   const [shippingQuotes, setShippingQuotes] = useState<ShippingQuote | null>(
     null

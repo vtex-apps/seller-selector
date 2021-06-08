@@ -19,7 +19,7 @@
     "typescript": "3.9.7",
     "vtex.add-to-cart-button": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.21.1/public/@types/vtex.add-to-cart-button",
     "vtex.address-form": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.address-form@4.6.3/public/_types/react",
-    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles",
+    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@1.0.0/public/@types/vtex.css-handles",
     "vtex.flex-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.15.2/public/@types/vtex.flex-layout",
     "vtex.format-currency": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.format-currency@0.3.0/public/@types/vtex.format-currency",
     "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.9.7/public/@types/vtex.product-context",

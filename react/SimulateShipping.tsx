@@ -25,7 +25,7 @@ const SIMULATE_SHIPPING_CSS_HANDLES = [
 ] as const
 
 function SimulateShipping() {
-  const handles = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
+  const { handles } = useCssHandles(SIMULATE_SHIPPING_CSS_HANDLES)
   const { selectedItem, selectedQuantity } = useProduct() ?? {}
   const { setShippingQuotes } = useSellerContext()
   const [updateShippingQuotes, { loading, data }] = useLazyQuery(

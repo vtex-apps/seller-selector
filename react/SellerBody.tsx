@@ -14,7 +14,7 @@ interface Props {
 
 function SellerBody({ children }: Props) {
   const { sellerList, shippingQuotes } = useSellerContext()
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
 
   const currentSellerCreate = useCallback(
     (current: Seller, index: number) => {
