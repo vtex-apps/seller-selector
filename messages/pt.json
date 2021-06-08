@@ -9,5 +9,8 @@
   "admin/editor.seller-selector.limitShippingInformation-title": "Quantas cotações de frete devem aparecer?",
   "admin/editor.seller-selector.limitShippingInformation-description": "Configure quantas informações de frete devem ser exibidas na tela simultaneamente, esta configuração será aplicada a todos os vendedores nessa pagina",
   "admin/editor.seller-selector.add-to-cart": "Adicionar Ao Carrinho",
-  "admin/editor.seller-selector.oneClickBuy-title": "Redirect to checkout"
+  "admin/editor.seller-selector.oneClickBuy-title": "Redirect to checkout",
+  "admin/editor.seller-selector.installments.description": "Valores disponiveis para interpolação: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.seller-selector.installments.title": "Parcelamento",
+  "store/seller-selector.installments.default": "Em até {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} de juros} false { sem juros}}"
 }
