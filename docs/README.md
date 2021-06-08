@@ -131,6 +131,7 @@ Behind the scenes, the Seller Selector page uses the following default implement
 | `seller-price` | Displays the seller price for a given product. |
 | `seller-shipping` | Displays shipping cost considering the sellers' data. |
 | `seller-price-with-shipping` | Displays the purchase final cost (shipping cost + product price). |
+| `seller-installments`  | Displays the installments of seller. (you can use [markers](https://developers.vtex.com/vtex-developer-docs/docs/vtex-product-price#step-3---editing-the-blocks-messages) to edit message)
 | `seller-add-to-cart` | Displays a Buy button that adds a given seller's product to the shopping cart. It is possible to use two different blocks inside of it `buy-button` or `add-to-cart-button` |
 |`buy-button`  | Default buy button, will be used if nothing is provided in the blocks section of `seller-add-to-cart`|
 |`add-to-cart-button`  | Buy button to use with Minicart.V2 and GoCommerce Stores |
