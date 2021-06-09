@@ -53,5 +53,15 @@
   },
   "seller-installments": {
     "component": "SellerInstallments"
+  },
+  "seller-installments-list": {
+    "component": "SellerInstallmentsList",
+    "composition": "children"
+  },
+  "seller-installments-list-item": {
+    "component": "SellerInstallmentsListItem",
+    "content": {
+      "$ref": "app:vtex.seller-selector#/definitions/InstallmentsListItem"
+    }
   }
 }

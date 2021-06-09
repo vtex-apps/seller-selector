@@ -3,13 +3,16 @@ import { defineMessages } from 'react-intl'
 import type { CssHandlesTypes } from 'vtex.css-handles'
 import { useCssHandles } from 'vtex.css-handles'
 
+import { useInstallments } from './components/InstallmentsContext'
 import InstallmentsRenderer, {
   CSS_HANDLES,
 } from './components/InstallmentsRender'
-import { useCurrentSeller } from './CurrentSellerContext'
 
 const messages = defineMessages({
   title: {
+    id: 'admin/editor.seller-selector.installments-list-item.title',
+  },
+  titleMessage: {
     id: 'admin/editor.seller-selector.installments.title',
   },
   description: {
@@ -27,43 +30,30 @@ interface Props {
   classes?: CssHandlesTypes.CustomClasses<typeof CSS_HANDLES>
 }
 
-function SellerInstallments({
+function SellerInstallmentsListItem({
   message = messages.default.id,
   markers = [],
   classes,
 }: Props) {
-  const { currentSeller } = useCurrentSeller()
   const { handles } = useCssHandles(CSS_HANDLES, { classes })
+  const { installment } = useInstallments() ?? {}
 
-  const installments = currentSeller?.commertialOffer?.Installments
-
-  if (!installments || installments?.length === 0) return null
-
-  const initialInstalment = installments[0]
-
-  const maxInstallmentOption = installments?.reduce(
-    (acc, installmentOption) => {
-      if (installmentOption.NumberOfInstallments > acc.NumberOfInstallments) {
-        return installmentOption
-      }
-
-      return acc
-    },
-    initialInstalment
-  )
+  if (!installment) {
+    return null
+  }
 
   return (
     <InstallmentsRenderer
-      installment={maxInstallmentOption}
       message={message}
       markers={markers}
+      installment={installment}
       handles={handles}
     />
   )
 }
 
-SellerInstallments.schema = {
-  title: messages.title.id,
+SellerInstallmentsListItem.schema = {
+  title: 'admin/installments-list-item.title',
 }
 
-export default SellerInstallments
+export default SellerInstallmentsListItem

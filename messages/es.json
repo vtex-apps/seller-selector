@@ -12,5 +12,6 @@
   "admin/editor.seller-selector.oneClickBuy-title": "Redireccionar a pagar",
   "admin/editor.seller-selector.installments.description": "Valores disponibles para interpolación: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
   "admin/editor.seller-selector.installments.title": "Cuotas",
+  "admin/editor.seller-selector.installments-list-item.title": "Cuotas",
   "store/seller-selector.installments.default": "Hasta {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} de interés} false { sin interés}}"
 }

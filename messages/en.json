@@ -12,5 +12,6 @@
   "admin/editor.seller-selector.oneClickBuy-title": "Redirect to checkout",
   "admin/editor.seller-selector.installments.description": "Values available for interpolation: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
   "admin/editor.seller-selector.installments.title": "Installments",
+  "admin/editor.seller-selector.installments-list-item.title": "Installments",
   "store/seller-selector.installments.default": "Up to {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} of interest} false { interest-free}}"
 }
