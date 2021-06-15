@@ -12,7 +12,7 @@ const SELLERS_CSS_HANDLES = ['sellerShipping', 'sellerShippingText'] as const
 function SellerShipping() {
   const { shipping } = useCurrentSeller()
   const { limitShownShippingInformation } = useSellerContext()
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
     <div

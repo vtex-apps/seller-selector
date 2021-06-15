@@ -13,7 +13,7 @@ const LINK_SELLER_HANDLES = [
 
 function LinkSeller() {
   const { product, selectedItem } = useProduct() ?? {}
-  const handles = useCssHandles(LINK_SELLER_HANDLES)
+  const { handles } = useCssHandles(LINK_SELLER_HANDLES)
 
   const availableSellers = selectedItem?.sellers.filter(
     (seller) => seller.commertialOffer.AvailableQuantity > 0

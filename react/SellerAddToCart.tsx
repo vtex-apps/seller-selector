@@ -13,7 +13,7 @@ interface Props {
 
 function SellerAddToCart({ isOneClickBuy }: Props) {
   const { currentSeller } = useCurrentSeller()
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
 
   const useAddToCart = !!useChildBlock({ id: 'add-to-cart-button' })
 

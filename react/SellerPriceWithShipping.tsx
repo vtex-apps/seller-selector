@@ -14,7 +14,7 @@ const SELLERS_CSS_HANDLES = [
 function SellerPriceWithShipping() {
   const { currentSeller, shipping } = useCurrentSeller()
   const { limitShownShippingInformation } = useSellerContext()
-  const handles = useCssHandles(SELLERS_CSS_HANDLES)
+  const { handles } = useCssHandles(SELLERS_CSS_HANDLES)
 
   return (
     <div
