@@ -1,0 +1,15 @@
+{
+  "definitions": {
+    "LinkSeller": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "title": "admin/editor.seller-link.textLinkTitle",
+          "description": "admin/editor.seller-link.textLinkDescription",
+          "$ref": "app:vtex.native-types#/definitions/text",
+          "default": "store/seller-link.linkText"
+        }
+      }
+    }
+  }
+}

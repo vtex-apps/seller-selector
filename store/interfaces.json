@@ -1,17 +1,16 @@
 {
   "store.sellers": {
-    "around": [
-      "productWrapper"
-    ],
+    "around": ["productWrapper"],
     "context": "vtex.store/ProductContext"
   },
   "store.product.sellertest": {
-    "allowed": [
-      "link-seller"
-    ]
+    "allowed": ["link-seller"]
   },
   "link-seller": {
-    "component": "LinkSeller"
+    "component": "LinkSeller",
+    "content": {
+      "$ref": "app:vtex.seller-selector#/definitions/LinkSeller"
+    }
   },
   "seller-table": {
     "component": "SellerTable",
@@ -50,10 +49,7 @@
   },
   "seller-add-to-cart": {
     "component": "SellerAddToCart",
-    "allowed": [
-      "add-to-cart-button",
-      "buy-button"
-    ]
+    "allowed": ["add-to-cart-button", "buy-button"]
   },
   "seller-simulate-shipping": {
     "component": "SimulateShipping"
