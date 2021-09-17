@@ -1,7 +1,7 @@
 {
   "store/seller-list.pending": "Escriba el código postal para calcular",
   "store/seller-list.shipping-label": "Calcular el flete",
-  "store/seller-link.linkText": "Verifique {number, plural, one {otro vendedor} other {# otros vendedores}}",
+  "store/seller-link.linkText": "Verifique {sellerQuantity, plural, one {otro vendedor} other {# otros vendedores}}",
   "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
   "admin/editor.seller-selector.title": "Selector de vendedor",
   "admin/editor.seller-selector.head-cell": "Celda de encabezado",
@@ -9,5 +9,8 @@
   "admin/editor.seller-selector.limitShippingInformation-title": "¿Cuántas cotizaciones de envío se deben mostrar?",
   "admin/editor.seller-selector.limitShippingInformation-description": "Configure cuántas cotizaciones de envío deben mostrarse, esta configuración se aplicará a todos los vendedores en esta página",
   "admin/editor.seller-selector.add-to-cart": "Añadir al carrito",
-  "admin/editor.seller-selector.oneClickBuy-title": "Redireccionar a pagar"
+  "admin/editor.seller-selector.oneClickBuy-title": "Redireccionar a pagar",
+  "admin/editor.seller-link.title": "Enlace del vendedor",
+  "admin/editor.seller-link.textLinkTitle": "Texto del enlace",
+  "admin/editor.seller-link.textLinkDescription": "Valores disponibles para interpolación: '{sellerQuantity}'"
 }

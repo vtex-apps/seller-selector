@@ -1,7 +1,7 @@
 {
   "store/seller-list.pending": "Type postal code to calculate",
   "store/seller-list.shipping-label": "Calculate shipping",
-  "store/seller-link.linkText": "View {number, plural, one {1 more seller} other {# more sellers}}",
+  "store/seller-link.linkText": "View {sellerQuantity, plural, one {1 more seller} other {# more sellers}}",
   "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
   "admin/editor.seller-selector.title": "Seller Selector",
   "admin/editor.seller-selector.head-cell": "Header Cell",
@@ -9,5 +9,8 @@
   "admin/editor.seller-selector.limitShippingInformation-title": "How many shipping quotes should be displayed?",
   "admin/editor.seller-selector.limitShippingInformation-description": "Configure how many shipping quotes should be displayed, this configuration will be applied to all sellers in this page",
   "admin/editor.seller-selector.add-to-cart": "Add To Cart",
-  "admin/editor.seller-selector.oneClickBuy-title": "Redirect to checkout"
+  "admin/editor.seller-selector.oneClickBuy-title": "Redirect to checkout",
+  "admin/editor.seller-link.title": "Seller Link",
+  "admin/editor.seller-link.textLinkTitle": "Link text",
+  "admin/editor.seller-link.textLinkDescription": "Values available for interpolation: '{sellerQuantity}'"
 }

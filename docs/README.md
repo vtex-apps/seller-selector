@@ -135,6 +135,17 @@ Behind the scenes, the Seller Selector page uses the following default implement
 |`buy-button`  | Default buy button, will be used if nothing is provided in the blocks section of `seller-add-to-cart`|
 |`add-to-cart-button`  | Buy button to use with Minicart.V2 and GoCommerce Stores |
 
+#### `link-seller` props
+
+| Prop name              | Type      | Description                                                                                                                                                                                                                                     | Default value |
+| ---------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `message`     | `string`  | Text displayed on link counter | `store/seller-link.linkText`|
+
+| Message variables | Type | Description | Example |
+| --- | --- | --- | --- |
+| `sellerQuantity` | `number` | Number of sellers sell this product | <code>View {**sellerQuantity**, plural, one {1 more seller} other {# more sellers}}</code> |
+
+This block uses the [ICU Message Format](https://format-message.github.io/icu-message-format-for-translators/), making it possible to fully edit the text message and variables displayed on block.
 
 #### `seller-table` props
 

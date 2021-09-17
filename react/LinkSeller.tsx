@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'vtex.render-runtime'
 import { useProduct } from 'vtex.product-context'
 import { useCssHandles } from 'vtex.css-handles'
-import { FormattedMessage } from 'react-intl'
+import { IOMessage } from 'vtex.native-types'
+import { defineMessages } from 'react-intl'
 
 const LINK_SELLER_HANDLES = [
   'linkSellerContainer',
@@ -11,7 +12,11 @@ const LINK_SELLER_HANDLES = [
   'linkSellerNumber',
 ] as const
 
-function LinkSeller() {
+interface Props {
+  message?: string
+}
+
+function LinkSeller({ message }: Props) {
   const { product, selectedItem } = useProduct() ?? {}
   const handles = useCssHandles(LINK_SELLER_HANDLES)
 
@@ -34,10 +39,10 @@ function LinkSeller() {
         query={selectedItem ? `skuId=${selectedItem.itemId}` : ''}
       >
         <p className={`${handles.linkSellerText} pr6`}>
-          <FormattedMessage
-            id="store/seller-link.linkText"
+          <IOMessage
+            id={message}
             values={{
-              number: availableSellers.length,
+              sellerQuantity: availableSellers.length,
             }}
           />
         </p>
@@ -46,9 +51,14 @@ function LinkSeller() {
   )
 }
 
+const messages = defineMessages({
+  title: {
+    id: 'admin/editor.seller-link.title',
+  },
+})
+
 LinkSeller.schema = {
-  title: 'editor.countdown.title',
-  description: 'editor.countdown.description',
+  title: messages.title.id,
 }
 
 export default LinkSeller

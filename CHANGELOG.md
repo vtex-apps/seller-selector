@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Add site editor property to edit seller link text
 ## [0.2.4] - 2021-09-01
 
 ### Added 
