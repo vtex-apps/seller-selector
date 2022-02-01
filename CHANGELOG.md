@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- Arabic translation.
+
 ## [0.3.0] - 2021-09-17
 
 ### Added
@@ -14,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add site editor property to edit seller link text
 ## [0.2.4] - 2021-09-01
 
-### Added 
+### Added
 - Crowdin.yml for crowdin integration.
 
 ## [0.2.3] - 2021-01-29
