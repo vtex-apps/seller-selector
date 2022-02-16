@@ -1,0 +1,16 @@
+{
+  "store/seller-list.pending": "พิมพ์รหัสไปรษณีย์เพื่อคำนวณ",
+  "store/seller-list.shipping-label": "คำนวณค่าจัดส่ง",
+  "store/seller-link.linkText": "ดู {sellerQuantity, plural, one {ผู้ชายอีก 1 คนr} other {# ผู้ขายมากขึ้น}}",
+  "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
+  "admin/editor.seller-selector.title": "ตัวเลือกผู้ขาย",
+  "admin/editor.seller-selector.head-cell": "เซลลฺ์ส่วนหัวของหน้า",
+  "admin/editor.seller-selector.head-cell-text": "ข้อความสำหรับเซลล์ส่วนหัวของหน้า",
+  "admin/editor.seller-selector.limitShippingInformation-title": "ควรแสดงใบเสนอราคาการจัดส่งกี่ใบ",
+  "admin/editor.seller-selector.limitShippingInformation-description": "กำหนดค่าว่าควรแสดงใบเสนอราคากี่ใบ การกำหนดค่านี้ใช้กับผู้ขายทั้งหมดในหน้านี้",
+  "admin/editor.seller-selector.add-to-cart": "เพิ่มลงในรถเข็น",
+  "admin/editor.seller-selector.oneClickBuy-title": "เปลี่ยนเส้นทางไปยังหน้าชำระเงิน",
+  "admin/editor.seller-link.title": "ลิงก์ผู้ชาย",
+  "admin/editor.seller-link.textLinkTitle": "ข้อความลิงก์",
+  "admin/editor.seller-link.textLinkDescription": "ค่าที่มีสำหรับการประมาณค่าในช่วง: '{sellerQuantity}'"
+}
