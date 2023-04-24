@@ -1,0 +1,16 @@
+{
+  "store/seller-list.pending": "請輸入郵遞區號以進行計算",
+  "store/seller-list.shipping-label": "計算運費",
+  "store/seller-link.linkText": "再檢視 {sellerQuantity, plural, one {1 個賣家} other {# 個賣家}}",
+  "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
+  "admin/editor.seller-selector.title": "賣家選擇器",
+  "admin/editor.seller-selector.head-cell": "標題儲存格",
+  "admin/editor.seller-selector.head-cell-text": "標題儲存格文字",
+  "admin/editor.seller-selector.limitShippingInformation-title": "應該顯示多少個運費報價？",
+  "admin/editor.seller-selector.limitShippingInformation-description": "設定應該顯示的運費報價數量；此設定檔將適用於此頁面所有賣家",
+  "admin/editor.seller-selector.add-to-cart": "加入購物車",
+  "admin/editor.seller-selector.oneClickBuy-title": "重新導向到結賬",
+  "admin/editor.seller-link.title": "賣家連結",
+  "admin/editor.seller-link.textLinkTitle": "連結文字",
+  "admin/editor.seller-link.textLinkDescription": "可用於插值的值：'{sellerQuantity}'"
+}

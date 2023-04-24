@@ -1,0 +1,16 @@
+{
+  "store/seller-list.pending": "Ketik kode pos untuk menghitung",
+  "store/seller-list.shipping-label": "Hitung pengiriman",
+  "store/seller-link.linkText": "Lihat {sellerQuantity, plural, one {1penjual lainnya} other {# penjual lainnya}}",
+  "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
+  "admin/editor.seller-selector.title": "Pemilih Penjual",
+  "admin/editor.seller-selector.head-cell": "Sel Header",
+  "admin/editor.seller-selector.head-cell-text": "Teks Sel Header",
+  "admin/editor.seller-selector.limitShippingInformation-title": "Berapa jumlah penawaran pengiriman yang harus ditampilkan?",
+  "admin/editor.seller-selector.limitShippingInformation-description": "Konfigurasi jumlah penawaran pengiriman yang harus ditampilkan, konfigurasi ini akan diterapkan pada semua penjual di halaman ini",
+  "admin/editor.seller-selector.add-to-cart": "Tambah ke Troli",
+  "admin/editor.seller-selector.oneClickBuy-title": "Alihkan ke checkout",
+  "admin/editor.seller-link.title": "Tautan Penjual",
+  "admin/editor.seller-link.textLinkTitle": "Teks tautan",
+  "admin/editor.seller-link.textLinkDescription": "Nilai tersedia untuk interpolasi: '{sellerQuantity}'"
+}

@@ -1,0 +1,16 @@
+{
+  "store/seller-list.pending": "Postleitzahl zur Berechnung eingeben",
+  "store/seller-list.shipping-label": "Versand berechnen",
+  "store/seller-link.linkText": "{sellerQuantity, plural, one {1 weiterer Verkäufer} other {# weitere Verkäufer}} anzeigen",
+  "store/seller-list.shipping-estimate": "{name} {price} {estimate}",
+  "admin/editor.seller-selector.title": "Verkäuferauswahl",
+  "admin/editor.seller-selector.head-cell": "Kopfzelle",
+  "admin/editor.seller-selector.head-cell-text": "Kopfzeilentext",
+  "admin/editor.seller-selector.limitShippingInformation-title": "Wie viele Versandkosten sollen angezeigt werden?",
+  "admin/editor.seller-selector.limitShippingInformation-description": "Legen Sie fest, wie viele Versandkosten angezeigt werden sollen. Diese Konfiguration wird auf alle Verkäufer dieser Seite angewendet",
+  "admin/editor.seller-selector.add-to-cart": "Zum Einkaufswagen hinzufügen",
+  "admin/editor.seller-selector.oneClickBuy-title": "Weiterleitung zur Kasse",
+  "admin/editor.seller-link.title": "Verkäufer-Link",
+  "admin/editor.seller-link.textLinkTitle": "Link-Text",
+  "admin/editor.seller-link.textLinkDescription": "Verfügbare Werte für Interpolation: '{sellerQuantity}'"
+}
